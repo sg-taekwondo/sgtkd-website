@@ -1,1040 +1,1248 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SG Taekwon-Do | ITF Taekwon-Do Scotland</title>
-
-<meta
-name="description"
-content="SG Taekwon-Do — ITF Taekwon-Do training for children, juniors and adults in Scotland. Dream. Believe. Prepare."
->
-
-<link rel="stylesheet" href="styles.css">
-</head>
-
-
-<body>
-
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
-<header>
-
-<div class="container nav">
-
-<a class="brand" href="index.html">
-
-<img
-src="assets/sg-tkd-logo.png"
-alt="SG Taekwon-Do logo"
->
-
-<span>SG Taekwon-Do</span>
-
-</a>
-
-
-<button
-class="nav-toggle"
-aria-label="Open menu"
->
-☰
-</button>
-
-
-<ul class="nav-links">
-
-<li>
-<a href="index.html" data-page="index.html">
-Home
-</a>
-</li>
-
-
-<li>
-<a href="about.html" data-page="about.html">
-About
-</a>
-</li>
-
-
-<li class="dropdown">
-
-<a href="classes.html" data-page="classes.html">
-Classes ▾
-</a>
-
-<div class="dropdown-menu">
-
-<a href="adults.html" data-page="adults.html">
-Adults
-</a>
-
-<a href="juniors.html" data-page="juniors.html">
-Juniors
-</a>
-
-<a href="ninjas.html" data-page="ninjas.html">
-Ninja's
-</a>
-
-</div>
-
-</li>
-
-
-<li>
-<a href="news.html" data-page="news.html">
-Blog / News
-</a>
-</li>
-
-
-<li>
-<a href="partners.html" data-page="partners.html">
-Partners
-</a>
-</li>
-
-
-<li>
-<a href="contact.html" data-page="contact.html">
-Contact Us
-</a>
-</li>
-
-</ul>
-
-</div>
-
-</header>
-
-
-
-<main>
-
-
-
-<!-- =========================
-     CINEMATIC HERO
-========================= -->
-
-<section class="hero home-hero">
-
-
-<div class="hero-glow hero-glow-green"></div>
-<div class="hero-glow hero-glow-blue"></div>
-
-<div class="hero-grid"></div>
-
-<div class="hero-tartan"></div>
-
-
-<div class="hero-content container">
-
-
-<!-- TENETS -->
-
-<div class="hero-tenets">
-
-<span class="tenets-heading">
-THE TENETS OF TAEKWON-DO
-</span>
-
-
-<div class="tenet">
-<span>01</span>
-COURTESY
-</div>
-
-
-<div class="tenet">
-<span>02</span>
-INTEGRITY
-</div>
-
-
-<div class="tenet">
-<span>03</span>
-PERSEVERANCE
-</div>
-
-
-<div class="tenet">
-<span>04</span>
-SELF-CONTROL
-</div>
-
-
-<div class="tenet">
-<span>05</span>
-INDOMITABLE SPIRIT
-</div>
-
-</div>
-
-
-
-<!-- CENTRE -->
-
-<div class="hero-centre">
-
-
-<div class="hero-logo-wrap">
-
-<div class="logo-ring"></div>
-
-<img
-class="hero-modern-logo"
-src="assets/sg-tkd-logo.png"
-alt="SG Taekwon-Do"
->
-
-</div>
-
-
-<span class="hero-kicker">
-ITF TAEKWON-DO • SCOTLAND
-</span>
-
-
-<h1>
-SG TAEKWON-DO
-</h1>
-
-
-<div class="hero-motto">
-
-<span class="motto-dream">
-DREAM
-</span>
-
-<span class="motto-dot">
-•
-</span>
-
-<span class="motto-believe">
-BELIEVE
-</span>
-
-<span class="motto-dot">
-•
-</span>
-
-<span class="motto-prepare">
-PREPARE
-</span>
-
-</div>
-
-
-<div class="hero-divider"></div>
-
-
-<p class="hero-intro">
-TRAIN. DEVELOP. ACHIEVE.
-</p>
-
-
-<p class="hero-description">
-ITF Taekwon-Do for children, juniors and adults.
-Develop your skills, build confidence and discover
-what you are capable of.
-</p>
-
-
-<div class="buttons">
-
-<a
-class="btn hero-btn"
-href="classes.html"
->
-START YOUR JOURNEY
-</a>
-
-
-<a
-class="btn alt hero-btn"
-href="contact.html"
->
-GET IN TOUCH
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- SIDE MOTTO -->
-
-<div class="hero-side">
-
-<div class="side-line"></div>
-
-<span>DREAM</span>
-
-<span class="side-believe">
-BELIEVE
-</span>
-
-<span>PREPARE</span>
-
-</div>
-
-
-</div>
-
-
-<div class="hero-scroll">
-
-<span></span>
-
-SCROLL TO EXPLORE
-
-</div>
-
-
-</section>
-
-
-
-<!-- =========================
-     INTRODUCTION
-========================= -->
-
-<section class="section dark">
-
-<div class="container">
-
-
-<div class="section-head">
-
-<span class="kicker">
-MORE THAN MARTIAL ARTS
-</span>
-
-
-<h2>
-Build Skills.
-Build Confidence.
-Build Character.
-</h2>
-
-
-<p>
-Taekwon-Do is more than learning how to kick and punch.
-It is a journey of discipline, perseverance, respect and
-personal development.
-</p>
-
-</div>
-
-
-
-<div class="feature-grid">
-
-
-<article class="feature-card">
-
-<div class="feature-number">
-01
-</div>
-
-<div class="feature-line"></div>
-
-<h3>
-DISCIPLINE
-</h3>
-
-<p>
-Develop focus, commitment and the discipline to keep
-progressing even when things become challenging.
-</p>
-
-</article>
-
-
-
-<article class="feature-card">
-
-<div class="feature-number">
-02
-</div>
-
-<div class="feature-line"></div>
-
-<h3>
-CONFIDENCE
-</h3>
-
-<p>
-Build confidence through training, achievement,
-teamwork and overcoming challenges.
-</p>
-
-</article>
-
-
-
-<article class="feature-card">
-
-<div class="feature-number">
-03
-</div>
-
-<div class="feature-line"></div>
-
-<h3>
-FITNESS
-</h3>
-
-<p>
-Improve strength, flexibility, coordination, speed,
-agility and overall physical fitness.
-</p>
-
-</article>
-
-
-
-<article class="feature-card">
-
-<div class="feature-number">
-04
-</div>
-
-<div class="feature-line"></div>
-
-<h3>
-COMMUNITY
-</h3>
-
-<p>
-Train alongside others in a supportive club environment
-built around respect and friendship.
-</p>
-
-</article>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     CLASSES
-========================= -->
-
-<section class="section">
-
-<div class="container">
-
-
-<div class="section-head">
-
-<span class="kicker">
-FIND YOUR PATH
-</span>
-
-<h2>
-Training For Every Age
-</h2>
-
-<p>
-Whether you're taking your first steps into martial arts
-or looking to develop your skills further, there is a
-place for you at SG Taekwon-Do.
-</p>
-
-</div>
-
-
-
-<div class="class-cards">
-
-
-<a
-class="class-card ninja-card"
-href="ninjas.html"
->
-
-<div class="class-card-overlay"></div>
-
-<div class="class-card-number">
-01
-</div>
-
-<div class="class-card-content">
-
-<span class="class-age">
-AGES 4–6
-</span>
-
-<h3>
-NINJA'S
-</h3>
-
-<p>
-Fun, active and confidence-building Taekwon-Do
-for our youngest students.
-</p>
-
-<span class="class-link">
-DISCOVER NINJA'S →
-</span>
-
-</div>
-
-</a>
-
-
-
-<a
-class="class-card junior-card"
-href="juniors.html"
->
-
-<div class="class-card-overlay"></div>
-
-<div class="class-card-number">
-02
-</div>
-
-<div class="class-card-content">
-
-<span class="class-age">
-AGES 6–16
-</span>
-
-<h3>
-JUNIORS
-</h3>
-
-<p>
-Develop technique, fitness, confidence and character
-through structured training.
-</p>
-
-<span class="class-link">
-DISCOVER JUNIORS →
-</span>
-
-</div>
-
-</a>
-
-
-
-<a
-class="class-card adult-card"
-href="adults.html"
->
-
-<div class="class-card-overlay"></div>
-
-<div class="class-card-number">
-03
-</div>
-
-<div class="class-card-content">
-
-<span class="class-age">
-AGES 16+
-</span>
-
-<h3>
-ADULTS
-</h3>
-
-<p>
-Technical development, fitness, self-defence and
-the challenge of progressing through Taekwon-Do.
-</p>
-
-<span class="class-link">
-DISCOVER ADULTS →
-</span>
-
-</div>
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     JOURNEY
-========================= -->
-
-<section class="section dark">
-
-<div class="container journey-grid">
-
-
-<div class="journey-copy">
-
-<span class="kicker">
-THE SG TAEKWON-DO JOURNEY
-</span>
-
-
-<h2>
-Dream. Believe. Prepare.
-</h2>
-
-
-<p>
-Every student has their own journey. Our role is to
-provide the training, guidance and encouragement
-needed to help each person progress.
-</p>
-
-
-<ul class="journey-list">
-
-<li>
-<span>01</span>
-Progressive grading and technical development
-</li>
-
-<li>
-<span>02</span>
-Patterns, fundamental movements and sparring
-</li>
-
-<li>
-<span>03</span>
-Competition and performance opportunities
-</li>
-
-<li>
-<span>04</span>
-Seminars, events and specialist training
-</li>
-
-<li>
-<span>05</span>
-A supportive and inclusive club environment
-</li>
-
-</ul>
-
-
-<a
-class="btn"
-href="about.html"
->
-DISCOVER SG TAEKWON-DO
-</a>
-
-</div>
-
-
-
-<!-- JOURNEY VISUAL -->
-
-<div class="journey-visual">
-
-
-<div class="journey-frame"></div>
-
-
-<div class="journey-logo">
-
-<img
-src="assets/sg-tkd-logo.png"
-alt="SG Taekwon-Do"
->
-
-</div>
-
-
-<div class="journey-words">
-
-<span>
-COURTESY
-</span>
-
-<span>
-INTEGRITY
-</span>
-
-<span>
-PERSEVERANCE
-</span>
-
-<span>
-SELF-CONTROL
-</span>
-
-<span>
-INDOMITABLE SPIRIT
-</span>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     ACHIEVEMENT
-========================= -->
-
-<section class="achievement-banner">
-
-
-<div class="achievement-light"></div>
-
-
-<div class="container achievement-inner">
-
-
-<div>
-
-<span class="kicker">
-TRAINING • COMPETITION • ACHIEVEMENT
-</span>
-
-
-<h2>
-Discover What You're Capable Of.
-</h2>
-
-
-<p>
-From your first class to grading, competition and beyond,
-every achievement begins with preparation.
-</p>
-
-</div>
-
-
-<a
-class="btn"
-href="news.html"
->
-VIEW CLUB NEWS
-</a>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     NEWS
-========================= -->
-
-<section class="section">
-
-<div class="container">
-
-
-<div class="section-head">
-
-<span class="kicker">
-KEEP UP TO DATE
-</span>
-
-<h2>
-Latest From The Club
-</h2>
-
-<p>
-Training, events, competitions, gradings and
-student achievements.
-</p>
-
-</div>
-
-
-
-<div class="news-grid">
-
-
-<article class="news-card">
-
-<span class="date">
-CLUB NEWS
-</span>
-
-<h3>
-Training, Events & Updates
-</h3>
-
-<p>
-Keep up with the latest SG Taekwon-Do announcements,
-events and club activities.
-</p>
-
-<a
-class="btn"
-href="news.html"
->
-READ NEWS
-</a>
-
-</article>
-
-
-
-<article class="news-card">
-
-<span class="date">
-CLASSES
-</span>
-
-<h3>
-Find Your Class
-</h3>
-
-<p>
-Explore our Ninja's, Juniors and Adults
-training pathways.
-</p>
-
-<a
-class="btn"
-href="classes.html"
->
-VIEW CLASSES
-</a>
-
-</article>
-
-
-
-<article class="news-card">
-
-<span class="date">
-CONTACT
-</span>
-
-<h3>
-Come And Train
-</h3>
-
-<p>
-Have a question about joining SG Taekwon-Do?
-Get in touch with the club.
-</p>
-
-<a
-class="btn"
-href="contact.html"
->
-CONTACT US
-</a>
-
-</article>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     FINAL CTA
-========================= -->
-
-<section class="final-cta">
-
-
-<div class="final-cta-glow"></div>
-
-
-<div class="container">
-
-<span class="kicker">
-YOUR JOURNEY STARTS HERE
-</span>
-
-
-<h2>
-READY TO START?
-</h2>
-
-
-<p>
-Take the first step and discover SG Taekwon-Do.
-</p>
-
-
-<a
-class="btn"
-href="contact.html"
->
-CONTACT SG TAEKWON-DO
-</a>
-
-</div>
-
-
-</section>
-
-
-</main>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-<div class="container">
-
-
-<div class="footer-grid">
-
-
-<div>
-
-<h3>
-SG Taekwon-Do
-</h3>
-
-<p>
-Traditional ITF Taekwon-Do with a modern,
-welcoming approach.
-
-Training, discipline, confidence and community
-for all ages.
-</p>
-
-</div>
-
-
-
-<div>
-
-<h3>
-Quick Links
-</h3>
-
-<ul>
-
-<li>
-<a href="about.html">
-About SG Taekwon-Do
-</a>
-</li>
-
-<li>
-<a href="classes.html">
-Our Classes
-</a>
-</li>
-
-<li>
-<a href="news.html">
-News & Updates
-</a>
-</li>
-
-<li>
-<a href="partners.html">
-Our Partners
-</a>
-</li>
-
-<li>
-<a href="contact.html">
-Contact Us
-</a>
-</li>
-
-</ul>
-
-</div>
-
-
-
-<div>
-
-<h3>
-Classes
-</h3>
-
-<ul>
-
-<li>
-<a href="adults.html">
-Adults
-</a>
-</li>
-
-<li>
-<a href="juniors.html">
-Juniors
-</a>
-</li>
-
-<li>
-<a href="ninjas.html">
-Ninja's
-</a>
-</li>
-
-</ul>
-
-</div>
-
-
-</div>
-
-
-
-<div class="footer-bottom">
-
-<span>
-© 2026 SG Taekwon-Do. All rights reserved.
-</span>
-
-<span>
-Dream • Believe • Prepare
-</span>
-
-</div>
-
-
-</div>
-
-</footer>
-
-
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+  --green:#08783f;
+  --green2:#10a65a;
+  --blue:#183b91;
+  --blue2:#2d5bd1;
+  --black:#030506;
+  --dark:#07100d;
+  --white:#f7f9fb;
+  --silver:#c9cdd2;
+  --muted:#aeb5ba;
+  --line:rgba(255,255,255,.13);
+  --glass:rgba(4,8,9,.82);
+  --gold:#d7b45a;
+  --max:1200px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  color:var(--white);
+  background:
+    linear-gradient(
+      rgba(2,5,4,.90),
+      rgba(2,5,4,.96)
+    ),
+    url('assets/sg-tkd-tartan.jpg') center/cover fixed;
+  font-family:'Roboto',Arial,sans-serif;
+  line-height:1.6;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(8,120,63,.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(24,59,145,.18),
+      transparent 35%
+    );
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.container{
+  width:min(var(--max),92%);
+  margin:auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(2,5,6,.94);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(14px);
+}
+
+.nav{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-family:'Oswald',sans-serif;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.brand img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  filter:drop-shadow(0 5px 15px rgba(0,0,0,.5));
+}
+
+.brand span{
+  font-size:1.05rem;
+}
+
+.nav-toggle{
+  display:none;
+  background:none;
+  border:1px solid var(--line);
+  color:white;
+  padding:9px 12px;
+  font-size:1.2rem;
+  cursor:pointer;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.nav-links a{
+  display:block;
+  padding:10px 13px;
+  border-radius:3px;
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  font-size:.9rem;
+  transition:.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+  background:var(--green);
+  color:white;
+}
+
+.dropdown{
+  position:relative;
+}
+
+.dropdown-menu{
+  position:absolute;
+  top:100%;
+  left:0;
+  min-width:190px;
+  padding:8px;
+  background:rgba(3,6,7,.98);
+  border:1px solid var(--line);
+  border-top:2px solid var(--green);
+  display:none;
+  box-shadow:0 18px 45px rgba(0,0,0,.55);
+}
+
+.dropdown:hover .dropdown-menu{
+  display:block;
+}
+
+.dropdown-menu a{
+  padding:9px 11px;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3{
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+  line-height:1.05;
+  margin-top:0;
+}
+
+h1{
+  font-size:clamp(3rem,7vw,6.5rem);
+  margin:18px 0 14px;
+  letter-spacing:2px;
+}
+
+h2{
+  font-size:clamp(2rem,4vw,3.5rem);
+}
+
+h3{
+  font-size:1.45rem;
+}
+
+.kicker{
+  display:inline-block;
+  border-left:3px solid var(--green2);
+  padding:7px 13px;
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:.8rem;
+  background:rgba(0,0,0,.35);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:88vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.home-hero{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2,5,4,.94),
+      rgba(2,5,4,.65),
+      rgba(2,5,4,.94)
+    ),
+    url('assets/sg-tkd-tartan.jpg') center/cover;
+}
+
+.home-hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      135deg,
+      transparent 0 35%,
+      rgba(8,120,63,.13) 50%,
+      transparent 65%
+    );
+  pointer-events:none;
+}
+
+.home-hero:after{
+  content:"";
+  position:absolute;
+  width:700px;
+  height:700px;
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    rgba(21,76,171,.22),
+    transparent 65%
+  );
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+
+.hero-inner{
+  position:relative;
+  z-index:1;
+  max-width:950px;
+  padding:90px 0;
+}
+
+.hero-logo{
+  width:min(260px,55vw);
+  margin:25px auto 20px;
+  filter:
+    drop-shadow(0 15px 30px rgba(0,0,0,.65))
+    drop-shadow(0 0 25px rgba(8,120,63,.15));
+}
+
+.hero-title-small{
+  font-family:'Oswald',sans-serif;
+  font-size:.95rem!important;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#b9c2c7;
+  margin:0!important;
+}
+
+.hero h1{
+  text-shadow:
+    0 5px 20px rgba(0,0,0,.75);
+}
+
+.hero-tagline{
+  font-family:'Oswald',sans-serif;
+  letter-spacing:3px;
+  font-size:1.05rem!important;
+  color:#d8dde0!important;
+}
+
+.hero-intro{
+  font-size:1.08rem!important;
+  max-width:760px;
+  margin:22px auto 30px!important;
+  color:#d5dadd!important;
+}
+
+.hero-motto{
+  margin-top:30px;
+  font-family:'Oswald',sans-serif;
+  font-size:1rem;
+  letter-spacing:4px;
+  color:#cfd4d7;
+}
+
+.hero-motto span{
+  color:var(--green2);
+  padding:0 8px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 24px;
+  border:1px solid rgba(255,255,255,.18);
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1.4px;
+  font-weight:600;
+  background:
+    linear-gradient(
+      135deg,
+      var(--green),
+      var(--green2)
+    );
+  transition:.25s ease;
+  box-shadow:0 8px 25px rgba(0,0,0,.3);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(0,0,0,.5);
+}
+
+.btn.alt{
+  background:rgba(0,0,0,.25);
+  border-color:rgba(255,255,255,.4);
+}
+
+.btn.alt:hover{
+  background:rgba(255,255,255,.1);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+  padding:105px 0;
+  position:relative;
+}
+
+.section.dark{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(2,5,6,.96),
+      rgba(4,16,12,.93)
+    );
+}
+
+.section-head{
+  max-width:780px;
+  margin:0 auto 55px;
+  text-align:center;
+}
+
+.section-head h2{
+  margin:18px 0;
+}
+
+.section-head p{
+  color:#c5cbd0;
+  font-size:1.05rem;
+}
+
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.feature-card{
+  position:relative;
+  padding:32px 26px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(8,18,15,.95),
+      rgba(3,7,8,.95)
+    );
+  border:1px solid var(--line);
+  overflow:hidden;
+  transition:.3s ease;
+}
+
+.feature-card:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:3px;
+  background:linear-gradient(
+    90deg,
+    var(--green),
+    var(--blue)
+  );
+}
+
+.feature-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(16,166,90,.45);
+}
+
+.feature-number{
+  font-family:'Oswald',sans-serif;
+  font-size:2.8rem;
+  color:rgba(255,255,255,.08);
+  line-height:1;
+  margin-bottom:18px;
+}
+
+.feature-card h3{
+  margin-bottom:12px;
+}
+
+.feature-card p{
+  color:#b9c0c5;
+  margin:0;
+}
+
+
+/* =========================
+   CLASS CARDS
+========================= */
+
+.class-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.class-card{
+  min-height:390px;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(8,120,63,.25),
+      rgba(24,59,145,.25)
+    ),
+    url('assets/sg-tkd-tartan.jpg') center/cover;
+  transition:.35s ease;
+}
+
+.class-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(16,166,90,.55);
+}
+
+.class-card-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      transparent 20%,
+      rgba(0,0,0,.92) 85%
+    );
+}
+
+.class-card-content{
+  position:relative;
+  z-index:2;
+  padding:30px;
+  width:100%;
+}
+
+.class-age{
+  display:inline-block;
+  font-family:'Oswald',sans-serif;
+  color:#8ee0ae;
+  font-size:.82rem;
+  letter-spacing:2px;
+}
+
+.class-card h3{
+  font-size:2.2rem;
+  margin:8px 0;
+}
+
+.class-card p{
+  color:#d1d6d9;
+  margin:0 0 20px;
+}
+
+.class-link{
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:.85rem;
+  color:#fff;
+}
+
+
+/* =========================
+   JOURNEY
+========================= */
+
+.journey-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:65px;
+  align-items:center;
+}
+
+.journey-grid > div:first-child{
+  max-width:650px;
+}
+
+.journey-grid h2{
+  margin:18px 0;
+}
+
+.journey-grid p{
+  color:#c5cbd0;
+}
+
+.checks{
+  list-style:none;
+  padding:0;
+  margin:28px 0;
+}
+
+.checks li{
+  padding:11px 0 11px 30px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  position:relative;
+  color:#d6dade;
+}
+
+.checks li:before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:#65d695;
+  font-weight:bold;
+}
+
+.journey-visual{
+  min-height:430px;
+  position:relative;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(8,120,63,.25),
+      rgba(24,59,145,.25)
+    ),
+    url('assets/sg-tkd-tartan.jpg') center/cover;
+}
+
+.journey-visual:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.38);
+}
+
+.journey-logo{
+  position:relative;
+  z-index:2;
+}
+
+.journey-logo img{
+  width:min(300px,65%);
+  filter:
+    drop-shadow(0 15px 30px rgba(0,0,0,.75));
+}
+
+.journey-words{
+  position:absolute;
+  bottom:20px;
+  right:25px;
+  text-align:right;
+  font-family:'Oswald',sans-serif;
+  font-size:.85rem;
+  letter-spacing:3px;
+  line-height:1.8;
+  color:rgba(255,255,255,.55);
+}
+
+
+/* =========================
+   ACHIEVEMENT BANNER
+========================= */
+
+.achievement-banner{
+  position:relative;
+  padding:80px 0;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,55,30,.95),
+      rgba(11,41,94,.92)
+    );
+  border-top:1px solid rgba(255,255,255,.1);
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.achievement-banner:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    url('assets/sg-tkd-tartan.jpg') center/cover;
+  opacity:.16;
+  mix-blend-mode:screen;
+}
+
+.achievement-inner{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:35px;
+}
+
+.achievement-inner h2{
+  margin:18px 0 10px;
+}
+
+.achievement-inner p{
+  color:#d4d9dc;
+  max-width:650px;
+}
+
+
+/* =========================
+   NEWS
+========================= */
+
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.news-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(7,15,13,.95),
+      rgba(2,6,8,.95)
+    );
+  border:1px solid var(--line);
+  padding:30px;
+  position:relative;
+  overflow:hidden;
+  transition:.3s ease;
+}
+
+.news-card:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:3px;
+  background:linear-gradient(
+    90deg,
+    var(--green),
+    var(--blue)
+  );
+}
+
+.news-card:hover{
+  transform:translateY(-5px);
+}
+
+.news-card .date{
+  font-family:'Oswald',sans-serif;
+  font-size:.8rem;
+  color:#88dca9;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.news-card h3{
+  margin:12px 0;
+}
+
+.news-card p{
+  color:#bfc5c9;
+  min-height:75px;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta{
+  padding:110px 0;
+  text-align:center;
+  background:
+    linear-gradient(
+      rgba(2,6,5,.84),
+      rgba(2,6,5,.95)
+    ),
+    url('assets/sg-tkd-tartan.jpg') center/cover;
+  border-top:1px solid var(--line);
+}
+
+.final-cta h2{
+  font-size:clamp(3rem,7vw,5.5rem);
+  margin:20px 0 10px;
+}
+
+.final-cta p{
+  color:#c6ccd0;
+  margin-bottom:30px;
+}
+
+
+/* =========================
+   GENERIC PAGES
+========================= */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:rgba(5,8,9,.88);
+  border:1px solid var(--line);
+  padding:28px;
+  position:relative;
+  overflow:hidden;
+}
+
+.card:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:3px;
+  background:linear-gradient(
+    90deg,
+    var(--green),
+    var(--blue)
+  );
+}
+
+.card p{
+  color:#cdd0d3;
+}
+
+.icon{
+  font-size:2rem;
+  margin-bottom:15px;
+}
+
+.age{
+  font-family:'Oswald';
+  color:#8bd2a8;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.page-hero{
+  padding:110px 0 75px;
+  text-align:center;
+  background:rgba(2,4,5,.78);
+  border-bottom:1px solid var(--line);
+}
+
+.page-hero h1{
+  font-size:clamp(2.8rem,6vw,4.7rem);
+}
+
+.page-hero p{
+  max-width:750px;
+  margin:auto;
+  color:#d4d6d8;
+}
+
+.split{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:42px;
+  align-items:center;
+}
+
+.visual{
+  min-height:360px;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(9,91,45,.5),
+      rgba(27,49,122,.4)
+    ),
+    url('assets/sg-tkd-tartan.jpg') center/cover;
+  display:grid;
+  place-items:center;
+  padding:30px;
+}
+
+.visual img{
+  width:min(330px,80%);
+  filter:drop-shadow(0 12px 25px rgba(0,0,0,.55));
+}
+
+.quote{
+  border-left:4px solid var(--green);
+  padding:20px 24px;
+  background:rgba(0,0,0,.35);
+  font-family:'Oswald';
+  font-size:1.4rem;
+  text-transform:uppercase;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+
+form{
+  display:grid;
+  gap:14px;
+}
+
+input,
+textarea{
+  width:100%;
+  padding:14px 15px;
+  background:rgba(0,0,0,.55);
+  border:1px solid var(--line);
+  color:white;
+  font:inherit;
+}
+
+textarea{
+  min-height:160px;
+  resize:vertical;
+}
+
+label{
+  font-family:'Oswald';
+  text-transform:uppercase;
+  letter-spacing:.6px;
+  font-size:.85rem;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#020303;
+  border-top:1px solid var(--line);
+  padding:55px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:35px;
+}
+
+footer p,
+footer li{
+  color:#bfc3c6;
+}
+
+footer ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+footer li{
+  margin:7px 0;
+}
+
+footer a:hover{
+  color:#71d899;
+}
+
+.footer-bottom{
+  border-top:1px solid var(--line);
+  margin-top:35px;
+  padding-top:20px;
+  font-size:.85rem;
+  color:#8f9498;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+
+/* =========================
+   CLASS PAGES
+========================= */
+
+.class-nav{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:0 auto 42px;
+}
+
+.class-nav a{
+  padding:10px 17px;
+  border:1px solid var(--line);
+  font-family:'Oswald';
+  text-transform:uppercase;
+}
+
+.class-nav a:hover,
+.class-nav a.active{
+  background:var(--green);
+}
+
+.schedule{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+.schedule th,
+.schedule td{
+  padding:14px;
+  border:1px solid var(--line);
+  text-align:left;
+}
+
+.schedule th{
+  background:rgba(10,83,41,.65);
+  font-family:'Oswald';
+  text-transform:uppercase;
+}
+
+.notice{
+  padding:18px;
+  border:1px solid rgba(101,201,137,.35);
+  background:rgba(10,83,41,.18);
+  margin:25px 0;
+}
+
+
+/* =========================
+   PARTNERS
+========================= */
+
+.partners-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.partner-card{
+  background:rgba(5,7,8,.88);
+  border:1px solid var(--line);
+  padding:30px;
+  position:relative;
+  overflow:hidden;
+  min-height:330px;
+}
+
+.partner-card:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(
+    90deg,
+    var(--green),
+    var(--blue)
+  );
+}
+
+.partner-logo{
+  min-height:110px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  border:1px dashed rgba(255,255,255,.22);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(9,91,45,.22),
+      rgba(27,49,122,.22)
+    );
+  font-family:'Oswald',sans-serif;
+  font-size:2.1rem;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-bottom:22px;
+}
+
+.partner-logo span{
+  font-size:.75rem;
+  letter-spacing:2px;
+}
+
+.partner-logo.text-logo{
+  font-size:1.35rem;
+  line-height:1.15;
+}
+
+.partner-type{
+  display:inline-block;
+  color:#8bd2a8;
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:.78rem;
+  margin-bottom:8px;
+}
+
+.partner-card h3{
+  margin:4px 0 10px;
+}
+
+.partner-card p{
+  color:#cdd0d3;
+}
+
+.funding-panel{
+  display:grid;
+  grid-template-columns:1.1fr 1fr 1fr;
+  gap:20px;
+  align-items:stretch;
+}
+
+.funding-panel>div:first-child{
+  padding:20px;
+}
+
+.funding-placeholder{
+  min-height:170px;
+  border:1px dashed rgba(255,255,255,.28);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,.35);
+}
+
+.funding-placeholder strong{
+  font-family:'Oswald';
+  font-size:1.3rem;
+  letter-spacing:1px;
+}
+
+.funding-placeholder span{
+  font-size:.82rem;
+  color:#999;
+  margin-top:7px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+  .feature-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .class-cards,
+  .news-grid,
+  .partners-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+
+@media(max-width:900px){
+
+  .nav-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    left:4%;
+    right:4%;
+    top:82px;
+    padding:10px;
+    flex-direction:column;
+    align-items:stretch;
+    background:rgba(3,5,6,.98);
+    border:1px solid var(--line);
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .dropdown-menu{
+    position:static;
+    display:block;
+    border:0;
+    padding:0 0 0 12px;
+    background:transparent;
+  }
+
+  .dropdown-menu a{
+    background:rgba(255,255,255,.03);
+    margin-top:4px;
+  }
+
+  .grid,
+  .split,
+  .contact-grid,
+  .footer-grid,
+  .funding-panel,
+  .journey-grid{
+    grid-template-columns:1fr;
+  }
+
+  .achievement-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+}
+
+
+@media(max-width:650px){
+
+  .feature-grid,
+  .class-cards,
+  .news-grid,
+  .partners-grid{
+    grid-template-columns:1fr;
+  }
+
+  .brand span{
+    font-size:.9rem;
+  }
+
+  .brand img{
+    width:50px;
+    height:50px;
+  }
+
+  .section{
+    padding:70px 0;
+  }
+
+  .hero{
+    min-height:78vh;
+  }
+
+  .hero-inner{
+    padding:70px 0;
+  }
+
+  .hero-logo{
+    width:min(210px,55vw);
+  }
+
+  .hero-motto{
+    font-size:.8rem;
+    letter-spacing:2px;
+  }
+
+  .class-card{
+    min-height:340px;
+  }
+
+  .journey-visual{
+    min-height:350px;
+  }
+
+  .achievement-banner{
+    padding:65px 0;
+  }
+
+}
