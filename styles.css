@@ -1246,3 +1246,386 @@ footer a:hover{
   }
 
 }
+/* =========================================================
+   CINEMATIC HOMEPAGE HERO
+   ========================================================= */
+
+.home-hero{
+  min-height:calc(100vh - 82px);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-content{
+  position:relative;
+  z-index:5;
+  width:min(1200px,92%);
+  min-height:calc(100vh - 82px);
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-tartan{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      rgba(2,5,4,.78),
+      rgba(2,5,4,.90)
+    ),
+    url('assets/sg-tkd-tartan.jpg') center/cover;
+  z-index:0;
+}
+
+.hero-grid{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  opacity:.18;
+  background-image:
+    linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+  background-size:80px 80px;
+}
+
+.hero-glow{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(70px);
+  pointer-events:none;
+  z-index:2;
+}
+
+.hero-glow-green{
+  width:500px;
+  height:500px;
+  background:rgba(8,120,63,.22);
+  left:-180px;
+  top:20%;
+}
+
+.hero-glow-blue{
+  width:500px;
+  height:500px;
+  background:rgba(24,59,145,.22);
+  right:-180px;
+  bottom:10%;
+}
+
+/* TENETS */
+
+.hero-tenets{
+  position:absolute;
+  top:42px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:10;
+  width:360px;
+  text-align:center;
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.tenets-heading{
+  display:block;
+  margin-bottom:10px;
+  color:rgba(255,255,255,.72);
+  font-size:.78rem;
+  letter-spacing:2px;
+}
+
+.tenet{
+  display:inline-block;
+  margin:2px 5px;
+  color:#e6e9eb;
+  font-size:.72rem;
+  letter-spacing:1px;
+}
+
+.tenet span{
+  color:#55cf8a;
+  margin-right:4px;
+}
+
+/* CENTRE HERO */
+
+.hero-centre{
+  position:relative;
+  z-index:8;
+  width:min(760px,80%);
+  text-align:center;
+  margin-top:35px;
+}
+
+.hero-logo-wrap{
+  position:relative;
+  width:270px;
+  height:270px;
+  margin:0 auto 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-modern-logo{
+  position:relative;
+  z-index:3;
+  width:230px;
+  height:230px;
+  object-fit:contain;
+  filter:
+    drop-shadow(0 18px 30px rgba(0,0,0,.75))
+    drop-shadow(0 0 28px rgba(8,120,63,.18));
+}
+
+.logo-ring{
+  position:absolute;
+  inset:8px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:50%;
+  box-shadow:
+    0 0 0 12px rgba(8,120,63,.035),
+    0 0 60px rgba(24,59,145,.12);
+}
+
+.hero-kicker{
+  display:inline-block;
+  font-family:'Oswald',sans-serif;
+  font-size:.85rem;
+  letter-spacing:4px;
+  color:#b9c2c7;
+  text-transform:uppercase;
+}
+
+.hero-centre h1{
+  margin:12px 0 8px;
+  font-size:clamp(3.2rem,7vw,6.3rem);
+  letter-spacing:3px;
+  text-shadow:0 8px 25px rgba(0,0,0,.75);
+}
+
+.hero-motto{
+  margin:8px 0 18px;
+  font-family:'Oswald',sans-serif;
+  font-size:1.15rem;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  color:#e0e4e6;
+}
+
+.motto-dot{
+  color:#55cf8a;
+  padding:0 8px;
+}
+
+.motto-believe{
+  background:linear-gradient(90deg,var(--green2),var(--blue2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero-divider{
+  width:100px;
+  height:2px;
+  margin:18px auto;
+  background:linear-gradient(
+    90deg,
+    var(--green),
+    var(--blue)
+  );
+}
+
+.hero-centre .hero-intro{
+  font-family:'Oswald',sans-serif;
+  font-size:1rem!important;
+  letter-spacing:3px;
+  color:#d8dde0!important;
+  margin:0 0 12px!important;
+}
+
+.hero-description{
+  max-width:600px;
+  margin:0 auto 25px;
+  color:#c7cdd1;
+  font-size:.98rem;
+}
+
+/* BUTTONS */
+
+.hero-btn{
+  min-width:190px;
+}
+
+/* SIDE MOTTO */
+
+.hero-side{
+  position:absolute;
+  right:15px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:8;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  font-family:'Oswald',sans-serif;
+  font-size:.7rem;
+  letter-spacing:3px;
+  color:rgba(255,255,255,.48);
+  writing-mode:vertical-rl;
+}
+
+.hero-side .side-line{
+  width:1px;
+  height:70px;
+  background:linear-gradient(
+    var(--green),
+    var(--blue)
+  );
+}
+
+.hero-side .side-believe{
+  color:#58cf8b;
+}
+
+/* SCROLL INDICATOR */
+
+.hero-scroll{
+  position:absolute;
+  bottom:24px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:10;
+  font-family:'Oswald',sans-serif;
+  font-size:.65rem;
+  letter-spacing:3px;
+  color:rgba(255,255,255,.45);
+  text-transform:uppercase;
+  text-align:center;
+}
+
+.hero-scroll span{
+  display:block;
+  width:1px;
+  height:32px;
+  margin:0 auto 8px;
+  background:linear-gradient(
+    var(--green),
+    transparent
+  );
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .hero-content{
+    min-height:calc(100vh - 82px);
+  }
+
+  .hero-tenets{
+    top:25px;
+    width:90%;
+  }
+
+  .hero-centre{
+    width:92%;
+    margin-top:55px;
+  }
+
+  .hero-logo-wrap{
+    width:210px;
+    height:210px;
+  }
+
+  .hero-modern-logo{
+    width:180px;
+    height:180px;
+  }
+
+  .hero-side{
+    display:none;
+  }
+
+  .hero-centre h1{
+    font-size:clamp(2.7rem,10vw,4.5rem);
+  }
+
+  .hero-description{
+    max-width:520px;
+  }
+}
+
+@media(max-width:600px){
+
+  .home-hero{
+    min-height:calc(100vh - 70px);
+  }
+
+  .hero-content{
+    min-height:calc(100vh - 70px);
+  }
+
+  .hero-tenets{
+    top:18px;
+  }
+
+  .tenets-heading{
+    font-size:.65rem;
+  }
+
+  .tenet{
+    font-size:.62rem;
+    margin:1px 3px;
+  }
+
+  .hero-centre{
+    margin-top:45px;
+  }
+
+  .hero-logo-wrap{
+    width:170px;
+    height:170px;
+    margin-bottom:12px;
+  }
+
+  .hero-modern-logo{
+    width:145px;
+    height:145px;
+  }
+
+  .hero-kicker{
+    font-size:.7rem;
+    letter-spacing:2px;
+  }
+
+  .hero-centre h1{
+    font-size:clamp(2.4rem,12vw,3.8rem);
+    letter-spacing:2px;
+  }
+
+  .hero-motto{
+    font-size:.9rem;
+    letter-spacing:3px;
+  }
+
+  .hero-description{
+    font-size:.88rem;
+  }
+
+  .hero-btn{
+    width:100%;
+    min-width:0;
+  }
+
+  .hero-scroll{
+    display:none;
+  }
+}
