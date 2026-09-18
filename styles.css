@@ -1629,3 +1629,109 @@ footer a:hover{
     display:none;
   }
 }
+/* =========================================================
+   HERO FINAL VISUAL REFINEMENT
+   ========================================================= */
+
+/* Move tenets higher and give them more presence */
+.hero-tenets{
+  top:28px;
+  width:500px;
+}
+
+.tenets-heading{
+  font-size:.82rem;
+  letter-spacing:2.5px;
+  margin-bottom:12px;
+}
+
+.tenet{
+  font-size:.76rem;
+  margin:3px 7px;
+  letter-spacing:1.2px;
+}
+
+/* Slightly larger, stronger central logo */
+.hero-logo-wrap{
+  width:300px;
+  height:300px;
+  margin-bottom:8px;
+}
+
+.hero-modern-logo{
+  width:255px;
+  height:255px;
+  filter:
+    drop-shadow(0 18px 30px rgba(0,0,0,.8))
+    drop-shadow(0 0 35px rgba(8,120,63,.25))
+    drop-shadow(0 0 25px rgba(24,59,145,.18));
+}
+
+/* Tighten the space between logo and main heading */
+.hero-centre{
+  margin-top:10px;
+}
+
+.hero-centre h1{
+  margin-top:5px;
+}
+
+/* Remove the duplicated vertical motto on the right */
+.hero-side{
+  display:none;
+}
+
+/* Keep the main motto visually prominent */
+.hero-motto{
+  margin-top:4px;
+  margin-bottom:14px;
+}
+
+/* Preserve sensible sizing on smaller screens */
+@media(max-width:900px){
+
+  .hero-logo-wrap{
+    width:230px;
+    height:230px;
+    margin-bottom:8px;
+  }
+
+  .hero-modern-logo{
+    width:195px;
+    height:195px;
+  }
+
+  .hero-centre{
+    margin-top:35px;
+  }
+
+  .hero-tenets{
+    top:20px;
+    width:90%;
+  }
+}
+
+@media(max-width:600px){
+
+  .hero-logo-wrap{
+    width:185px;
+    height:185px;
+  }
+
+  .hero-modern-logo{
+    width:155px;
+    height:155px;
+  }
+
+  .hero-centre{
+    margin-top:30px;
+  }
+
+  .hero-tenets{
+    top:15px;
+  }
+
+  .tenet{
+    font-size:.62rem;
+  }
+}
