@@ -1735,3 +1735,7 @@ footer a:hover{
     font-size:.62rem;
   }
 }
+/* Remove Tenets of Taekwon-Do from homepage hero */
+.hero-tenets {
+  display: none !important;
+}
