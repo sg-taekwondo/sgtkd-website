@@ -1744,19 +1744,22 @@ footer a:hover{
    Uses the supplied hero artwork without editing the image.
    ========================================================= */
 
-.home-hero {
-    background-image: url('assets/sg-tkd-hero.jpg') !important;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+@media (max-width: 768px) {
 
-    /* Allow the real website navigation to cover
-       the navigation embedded in the hero artwork */
-    margin-top: -70px;
-    padding-top: 70px;
+    .home-hero {
+        background-image: url('assets/sg-tkd-hero-mobile.png') !important;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
 
-  height: calc(100vw * 868 / 1813);
-  min-height: 0;
+        height: 100vh;
+        min-height: 650px;
+
+        margin-top: -70px;
+        padding-top: 70px;
+        box-sizing: border-box;
+    }
+
 }
 
 /* Hide the original HTML hero artwork/content */
