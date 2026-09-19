@@ -1763,8 +1763,7 @@ footer a:hover{
 }
 
 /* =========================================================
-   DESKTOP HOMEPAGE HERO
-   Uses the approved desktop hero artwork.
+   APPROVED DESKTOP HOMEPAGE HERO
    ========================================================= */
 
 .home-hero {
@@ -1779,6 +1778,23 @@ footer a:hover{
     height: calc(100vw * 868 / 1813);
     min-height: 0;
     box-sizing: border-box;
+}
+
+/* Hide the original HTML hero content.
+   The approved artwork already contains the text and buttons. */
+
+.home-hero .hero-content,
+.home-hero .hero-scroll,
+.home-hero .hero-glow,
+.home-hero .hero-grid,
+.home-hero .hero-tartan,
+.home-hero .hero-tenets {
+    display: none !important;
+}
+
+.home-hero::before,
+.home-hero::after {
+    display: none !important;
 }
 
 /* =========================================================
