@@ -1752,8 +1752,8 @@ footer a:hover{
 
     /* Allow the real website navigation to cover
        the navigation embedded in the hero artwork */
-    margin-top: -55px;
-    padding-top: 55px;
+    margin-top: -70px;
+    padding-top: 70px;
 
   height: calc(100vw * 868 / 1813);
   min-height: 0;
