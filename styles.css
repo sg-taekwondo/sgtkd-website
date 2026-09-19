@@ -1776,18 +1776,19 @@ footer a:hover{
 }
 /* =========================================================
    MOBILE HOMEPAGE HERO
+   Preserve the complete approved artwork.
    ========================================================= */
 
 @media (max-width: 768px) {
 
     .home-hero {
-        height: 560px;
-        min-height: 560px;
+        height: calc(100vw * 868 / 1813);
+        min-height: 0;
 
         margin-top: -70px;
         padding-top: 70px;
 
-        background-size: auto 560px;
+        background-size: 100% 100%;
         background-position: center center;
         background-repeat: no-repeat;
     }
