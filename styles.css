@@ -1749,6 +1749,11 @@ footer a:hover{
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    /* Allow the real website navigation to cover
+       the navigation embedded in the hero artwork */
+    margin-top: -82px;
+    padding-top: 82px;
 }
 
 /* Hide the original HTML hero artwork/content */
