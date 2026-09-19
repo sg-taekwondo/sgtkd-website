@@ -1739,3 +1739,30 @@ footer a:hover{
 .hero-tenets {
   display: none !important;
 }
+/* =========================================================
+   APPROVED SG TAEKWON-DO HOMEPAGE HERO
+   Uses the supplied hero artwork without editing the image.
+   ========================================================= */
+
+.home-hero {
+    background-image: url('assets/sg-tkd-hero.jpg') !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Hide the original HTML hero artwork/content */
+.home-hero .hero-content,
+.home-hero .hero-scroll,
+.home-hero .hero-glow,
+.home-hero .hero-grid,
+.home-hero .hero-tartan,
+.home-hero .hero-tenets {
+    display: none !important;
+}
+
+/* Remove existing hero overlays */
+.home-hero::before,
+.home-hero::after {
+    display: none !important;
+}
