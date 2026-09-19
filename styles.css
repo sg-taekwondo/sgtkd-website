@@ -1784,6 +1784,7 @@ footer a:hover{
     .home-hero {
         height: calc(100vw * 868 / 1813);
         min-height: 0;
+        box-sizing: border-box;
 
         margin-top: -70px;
         padding-top: 70px;
