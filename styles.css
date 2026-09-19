@@ -1785,14 +1785,14 @@ footer a:hover{
 @media (max-width: 768px) {
 
     .home-hero {
-        height: calc(100vw * 868 / 1813);
-        min-height: 0;
+        height: 430px;
+        min-height: 430px;
         box-sizing: border-box;
 
         margin-top: -70px;
         padding-top: 70px;
 
-        background-size: 100% 100%;
+        background-size: auto 430px;
         background-position: center center;
         background-repeat: no-repeat;
     }
