@@ -1766,36 +1766,37 @@ footer a:hover{
    APPROVED DESKTOP HOMEPAGE HERO
    ========================================================= */
 
-.home-hero {
-    background-image: url('assets/sg-tkd-hero.jpg') !important;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+@media (min-width: 769px) {
 
-    margin-top: -70px;
-    padding-top: 70px;
+    .home-hero {
+        background-image: url('assets/sg-tkd-hero.jpg') !important;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
 
-    height: calc(100vw * 868 / 1813);
-    min-height: 0;
-    box-sizing: border-box;
+        margin-top: -70px;
+        padding-top: 70px;
+
+        height: calc(100vw * 868 / 1813);
+        min-height: 0;
+        box-sizing: border-box;
+    }
+
+    .home-hero .hero-content,
+    .home-hero .hero-scroll,
+    .home-hero .hero-glow,
+    .home-hero .hero-grid,
+    .home-hero .hero-tartan,
+    .home-hero .hero-tenets {
+        display: none !important;
+    }
+
+    .home-hero::before,
+    .home-hero::after {
+        display: none !important;
+    }
 }
 
-/* Hide the original HTML hero content.
-   The approved artwork already contains the text and buttons. */
-
-.home-hero .hero-content,
-.home-hero .hero-scroll,
-.home-hero .hero-glow,
-.home-hero .hero-grid,
-.home-hero .hero-tartan,
-.home-hero .hero-tenets {
-    display: none !important;
-}
-
-.home-hero::before,
-.home-hero::after {
-    display: none !important;
-}
 
 /* =========================================================
    MOBILE HOMEPAGE HERO
@@ -1803,6 +1804,7 @@ footer a:hover{
    ========================================================= */
 
 @media (max-width: 768px) {
+
     .home-hero {
         background-image: url('assets/sg-tkd-hero-mobile.png') !important;
         background-size: 100% auto;
@@ -1815,5 +1817,19 @@ footer a:hover{
         height: calc(100vw * 1000 / 667);
         min-height: 0;
         box-sizing: border-box;
+    }
+
+    .home-hero .hero-content,
+    .home-hero .hero-scroll,
+    .home-hero .hero-glow,
+    .home-hero .hero-grid,
+    .home-hero .hero-tartan,
+    .home-hero .hero-tenets {
+        display: none !important;
+    }
+
+    .home-hero::before,
+    .home-hero::after {
+        display: none !important;
     }
 }
