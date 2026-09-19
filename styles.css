@@ -1754,6 +1754,9 @@ footer a:hover{
        the navigation embedded in the hero artwork */
     margin-top: -55px;
     padding-top: 55px;
+
+  height: calc(100vw * 868 / 1813);
+  min-height: 0;
 }
 
 /* Hide the original HTML hero artwork/content */
