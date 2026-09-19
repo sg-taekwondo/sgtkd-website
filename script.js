@@ -17,3 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+// Always start the homepage at the top
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('/sgtkd-website/')) {
+    window.addEventListener('load', function () {
+        window.scrollTo(0, 0);
+    });
+}
