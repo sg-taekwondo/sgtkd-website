@@ -1809,10 +1809,10 @@ footer a:hover{
         background-position: top center;
         background-repeat: no-repeat;
 
-        margin-top: -70px;
-        padding-top: 70px;
+        margin-top: 0;
+        padding-top: 0;
 
-        height: auto;
+        height: calc(100vw * 1000 / 667);
         min-height: 0;
         box-sizing: border-box;
     }
