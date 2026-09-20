@@ -1848,3 +1848,49 @@ footer a:hover{
         display: none !important;
     }
 }
+/* =========================================================
+   HERO IMAGE CTA HOTSPOTS
+   Makes the buttons embedded in the approved artwork clickable
+   ========================================================= */
+
+.hero-hotspot{
+  position:absolute;
+  display:block;
+  z-index:20;
+}
+
+@media (min-width:769px){
+
+  .hero-hotspot-journey{
+    left:37%;
+    top:78%;
+    width:14%;
+    height:9%;
+  }
+
+  .hero-hotspot-contact{
+    left:50%;
+    top:78%;
+    width:14%;
+    height:9%;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .hero-hotspot-journey{
+    left:30%;
+    top:71%;
+    width:40%;
+    height:7%;
+  }
+
+  .hero-hotspot-contact{
+    left:30%;
+    top:78%;
+    width:40%;
+    height:7%;
+  }
+
+}
