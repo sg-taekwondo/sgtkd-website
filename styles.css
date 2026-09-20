@@ -611,9 +611,11 @@ h3{
 }
 
 .journey-logo{
-  position:relative;
+  position:absolute;
+  left:34%;
+  top:50%;
+  transform:translate(-50%,-50%);
   z-index:2;
-   transform:translateX(-15px);
 }
 
 .journey-logo img{
