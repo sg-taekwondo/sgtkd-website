@@ -1124,7 +1124,7 @@ footer a:hover{
 @media(max-width:1000px){
 
   .feature-grid{
-    grid-template-columns:repeat(2,1fr);
+   grid-template-columns:repeat(4,1fr);
   }
 
   .class-cards,
