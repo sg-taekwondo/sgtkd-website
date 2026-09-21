@@ -1909,3 +1909,17 @@ footer a:hover{
   }
 
 }
+/* =========================================================
+   NINJAS DEVELOPMENT GRID
+   Four cards displayed as a balanced 2 x 2 layout
+   ========================================================= */
+
+@media (min-width: 901px){
+
+  .development-grid{
+    grid-template-columns:repeat(2,1fr);
+    max-width:850px;
+    margin:0 auto;
+  }
+
+}
