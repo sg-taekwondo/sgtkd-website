@@ -874,6 +874,23 @@ h3{
   filter:drop-shadow(0 12px 25px rgba(0,0,0,.55));
 }
 
+/* Ninjas photographic visual */
+.ninjas-hero-image{
+  padding:0;
+  overflow:hidden;
+}
+
+.ninjas-hero-image img{
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  display:block;
+  filter:none;
+}
+
+.quote{
+
 .quote{
   border-left:4px solid var(--green);
   padding:20px 24px;
