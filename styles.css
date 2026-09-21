@@ -876,18 +876,19 @@ h3{
 
 /* Ninjas photographic visual */
 .ninjas-hero-image{
-  padding:0;
+  padding:0 !important;
   overflow:hidden;
-  background:none;
+  background:none !important;
   border:1px solid var(--line);
   box-shadow:0 18px 45px rgba(0,0,0,.35);
 }
 
 .ninjas-hero-image img{
   display:block;
-  width:100%;
-  height:auto;
-  max-width:100%;
+  width:100% !important;
+  max-width:none !important;
+  height:auto !important;
+  margin:0;
   object-fit:contain;
   filter:none;
 }
