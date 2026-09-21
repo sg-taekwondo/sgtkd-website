@@ -878,14 +878,17 @@ h3{
 .ninjas-hero-image{
   padding:0;
   overflow:hidden;
+  background:none;
+  border:1px solid var(--line);
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
 }
 
 .ninjas-hero-image img{
-  width:100%;
-  height:100%;
-  max-width:none;
-  object-fit:cover;
   display:block;
+  width:100%;
+  height:auto;
+  max-width:100%;
+  object-fit:contain;
   filter:none;
 }
 
