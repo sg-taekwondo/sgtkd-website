@@ -2082,5 +2082,254 @@ footer a:hover{
     .development-grid .card:after{
         font-size:7rem;
     }
+/* =========================
+   NINJAS — CLASS FLOW
+   ========================= */
 
+.ninjas-class-flow{
+    position:relative;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:26px;
+
+    margin-top:32px;
+}
+
+/* Training journey line */
+
+.ninjas-class-flow:before{
+    content:"";
+
+    position:absolute;
+
+    left:8%;
+    right:8%;
+    top:30px;
+
+    height:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16,166,90,.15),
+            rgba(16,166,90,.75),
+            rgba(30,80,180,.75),
+            rgba(30,80,180,.15)
+        );
+
+    z-index:0;
+}
+
+/* Individual stages */
+
+.ninjas-class-flow .card{
+    position:relative;
+
+    min-height:190px;
+
+    padding:58px 28px 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5,18,14,.96),
+            rgba(3,7,10,.98)
+        );
+
+    border:1px solid rgba(255,255,255,.10);
+
+    overflow:hidden;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+/* Stage number */
+
+.ninjas-class-flow .card:before{
+    content:"";
+
+    position:absolute;
+
+    top:15px;
+    left:22px;
+
+    width:32px;
+    height:32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(16,166,90,.7);
+
+    border-radius:50%;
+
+    font-family:'Oswald',sans-serif;
+    font-size:.85rem;
+    font-weight:700;
+
+    color:#ffffff;
+
+    background:#07120e;
+
+    z-index:3;
+}
+
+.ninjas-class-flow .card:nth-child(1):before{
+    content:"01";
+}
+
+.ninjas-class-flow .card:nth-child(2):before{
+    content:"02";
+}
+
+.ninjas-class-flow .card:nth-child(3):before{
+    content:"03";
+}
+
+.ninjas-class-flow .card:nth-child(4):before{
+    content:"04";
+}
+
+.ninjas-class-flow .card:nth-child(5):before{
+    content:"05";
+}
+
+.ninjas-class-flow .card:nth-child(6):before{
+    content:"06";
+}
+
+/* Stage headings */
+
+.ninjas-class-flow .card h3{
+    position:relative;
+
+    z-index:2;
+
+    margin:0 0 14px;
+
+    font-family:'Oswald',sans-serif;
+
+    font-size:1.55rem;
+
+    letter-spacing:1.2px;
+}
+
+/* Stage descriptions */
+
+.ninjas-class-flow .card p{
+    position:relative;
+
+    z-index:2;
+
+    margin:0;
+
+    color:#c5cbd0;
+
+    line-height:1.65;
+}
+
+/* Subtle stage number watermark */
+
+.ninjas-class-flow .card:after{
+    position:absolute;
+
+    right:10px;
+    bottom:-28px;
+
+    font-family:'Oswald',sans-serif;
+
+    font-size:7rem;
+
+    line-height:1;
+
+    font-weight:700;
+
+    color:rgba(255,255,255,.025);
+
+    pointer-events:none;
+}
+
+.ninjas-class-flow .card:nth-child(1):after{
+    content:"01";
+}
+
+.ninjas-class-flow .card:nth-child(2):after{
+    content:"02";
+}
+
+.ninjas-class-flow .card:nth-child(3):after{
+    content:"03";
+}
+
+.ninjas-class-flow .card:nth-child(4):after{
+    content:"04";
+}
+
+.ninjas-class-flow .card:nth-child(5):after{
+    content:"05";
+}
+
+.ninjas-class-flow .card:nth-child(6):after{
+    content:"06";
+}
+
+/* Top accent */
+
+.ninjas-class-flow .card{
+    border-top:3px solid rgba(16,166,90,.65);
+}
+
+.ninjas-class-flow .card:nth-child(3n+2){
+    border-top-color:rgba(25,120,180,.65);
+}
+
+.ninjas-class-flow .card:nth-child(3n){
+    border-top-color:rgba(40,70,180,.65);
+}
+
+/* Hover */
+
+.ninjas-class-flow .card:hover{
+    transform:translateY(-5px);
+
+    border-color:rgba(16,166,90,.45);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.35),
+        0 0 25px rgba(16,166,90,.08);
+}
+
+/* Mobile */
+
+@media(max-width:800px){
+
+    .ninjas-class-flow{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .ninjas-class-flow:before{
+        display:none;
+    }
+
+}
+
+@media(max-width:520px){
+
+    .ninjas-class-flow{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .ninjas-class-flow .card{
+        min-height:auto;
+        padding:58px 24px 26px;
+    }
+
+}
 }
