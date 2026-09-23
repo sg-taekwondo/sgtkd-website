@@ -2499,3 +2499,168 @@ footer a:hover{
     }
 
 }
+/* =========================
+   NINJAS — FINAL CTA
+   ========================= */
+
+.ninjas-final-cta{
+    position:relative;
+
+    max-width:900px;
+
+    padding:90px 60px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(16,166,90,.13),
+            transparent 58%
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        inset 0 0 80px rgba(0,0,0,.25);
+}
+
+/* Atmospheric background glow */
+
+.ninjas-final-cta:before{
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(20,120,180,.08),
+            transparent 68%
+        );
+
+    pointer-events:none;
+}
+
+/* Large background word */
+
+.ninjas-final-cta:after{
+    content:"NINJAS";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-55px;
+
+    transform:translateX(-50%);
+
+    font-family:'Oswald',sans-serif;
+
+    font-size:10rem;
+
+    line-height:1;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    color:rgba(255,255,255,.025);
+
+    white-space:nowrap;
+
+    pointer-events:none;
+}
+
+/* Keep content above atmosphere */
+
+.ninjas-final-cta .section-head{
+    position:relative;
+    z-index:2;
+}
+
+/* CTA heading */
+
+.ninjas-final-cta h2{
+    font-size:clamp(2.8rem,6vw,5rem);
+
+    margin:14px 0 20px;
+
+    letter-spacing:1px;
+}
+
+/* CTA paragraph */
+
+.ninjas-final-cta p{
+    max-width:650px;
+
+    margin:0 auto 30px;
+
+    color:#cbd1d5;
+
+    line-height:1.75;
+
+    font-size:1.05rem;
+}
+
+/* CTA button */
+
+.ninjas-final-cta .btn{
+    position:relative;
+
+    z-index:3;
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-width:190px;
+
+    padding:15px 28px;
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.ninjas-final-cta .btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 14px 35px rgba(0,0,0,.45),
+        0 0 25px rgba(16,166,90,.15);
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .ninjas-final-cta{
+        padding:70px 28px;
+    }
+
+    .ninjas-final-cta:after{
+        font-size:6rem;
+        bottom:-30px;
+    }
+
+}
