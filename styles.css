@@ -2689,3 +2689,148 @@ footer a:hover{
 
     margin:0;
 }
+/* =========================
+   JUNIORS — TRAINING FOCUS
+   ========================= */
+
+.juniors-focus-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    margin-top:34px;
+}
+
+.juniors-focus-grid .card{
+    position:relative;
+    min-height:270px;
+    padding:42px 32px 34px;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5,18,14,.97),
+            rgba(3,7,10,.99)
+        );
+
+    border:1px solid rgba(255,255,255,.10);
+    border-top:3px solid rgba(16,166,90,.7);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+/* Blue accent on the middle panel */
+
+.juniors-focus-grid .card:nth-child(2){
+    border-top-color:rgba(35,105,190,.75);
+}
+
+/* Strong blue accent on the final panel */
+
+.juniors-focus-grid .card:nth-child(3){
+    border-top-color:rgba(55,75,190,.75);
+}
+
+/* Large background numbers */
+
+.juniors-focus-grid .card:before{
+    position:absolute;
+    right:18px;
+    bottom:-25px;
+
+    font-family:'Oswald',sans-serif;
+    font-size:9rem;
+    line-height:1;
+    font-weight:700;
+
+    color:rgba(255,255,255,.035);
+
+    pointer-events:none;
+}
+
+.juniors-focus-grid .card:nth-child(1):before{
+    content:"01";
+}
+
+.juniors-focus-grid .card:nth-child(2):before{
+    content:"02";
+}
+
+.juniors-focus-grid .card:nth-child(3):before{
+    content:"03";
+}
+
+/* Small category marker */
+
+.juniors-focus-grid .card:after{
+    content:"";
+
+    position:absolute;
+    left:32px;
+    top:26px;
+
+    width:34px;
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--blue)
+        );
+}
+
+/* Headings */
+
+.juniors-focus-grid .card h3{
+    position:relative;
+    z-index:2;
+
+    margin:28px 0 18px;
+
+    font-family:'Oswald',sans-serif;
+    font-size:2rem;
+    letter-spacing:1.5px;
+}
+
+/* Descriptions */
+
+.juniors-focus-grid .card p{
+    position:relative;
+    z-index:2;
+
+    max-width:360px;
+    margin:0;
+
+    color:#c5cbd0;
+    line-height:1.7;
+}
+
+/* Subtle hover */
+
+.juniors-focus-grid .card:hover{
+    transform:translateY(-6px);
+
+    border-color:rgba(16,166,90,.45);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.38),
+        0 0 25px rgba(16,166,90,.08);
+}
+
+/* Mobile */
+
+@media(max-width:800px){
+
+    .juniors-focus-grid{
+        grid-template-columns:1fr;
+    }
+
+    .juniors-focus-grid .card{
+        min-height:auto;
+    }
+
+}
