@@ -3260,3 +3260,12 @@ footer a:hover{
     );
   border-color:rgba(0,180,110,.35);
 }
+.juniors-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0,55,120,.24),
+      rgba(0,0,0,.96) 65%
+    );
+  border-color:rgba(35,100,180,.38);
+}
