@@ -3574,3 +3574,84 @@ footer a:hover{
     padding:25px 22px;
   }
 }
+/* =========================
+   LATEST STORIES
+========================= */
+
+.latest-stories-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:50px;
+}
+
+.story-card{
+  position:relative;
+  padding:30px;
+  min-height:240px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(7,15,13,.95),
+      rgba(2,6,8,.95)
+    );
+  border:1px solid var(--line);
+  overflow:hidden;
+  transition:.3s ease;
+}
+
+.story-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:3px;
+  background:linear-gradient(
+    90deg,
+    var(--green),
+    var(--blue)
+  );
+}
+
+.story-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(16,166,90,.45);
+}
+
+.story-category{
+  display:inline-block;
+  margin-bottom:14px;
+  font-family:'Oswald',sans-serif;
+  font-size:.8rem;
+  color:#88dca9;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.story-card h3{
+  margin:0 0 16px;
+  font-size:1.7rem;
+}
+
+.story-card p{
+  margin:0;
+  color:#bfc5c9;
+  line-height:1.7;
+}
+
+@media(max-width:1000px){
+  .latest-stories-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:650px){
+  .latest-stories-grid{
+    grid-template-columns:1fr;
+  }
+
+  .story-card{
+    min-height:auto;
+  }
+}
