@@ -3278,3 +3278,162 @@ footer a:hover{
     );
   border-color:rgba(150,155,160,.28);
 }
+/* =========================
+   TAEKWON-DO JOURNEY
+========================= */
+
+.journey-section{
+  margin-top:80px;
+  padding:70px 0 20px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.journey-section .section-intro{
+  max-width:850px;
+  margin-bottom:50px;
+}
+
+.journey-track{
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr;
+  align-items:stretch;
+  gap:22px;
+}
+
+.journey-step{
+  position:relative;
+  padding:30px 28px;
+  min-height:220px;
+  background:rgba(0,0,0,.48);
+  border:1px solid rgba(255,255,255,.10);
+  overflow:hidden;
+}
+
+.journey-step::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+}
+
+.journey-ninjas{
+  border-color:rgba(0,180,110,.25);
+}
+
+.journey-ninjas::before{
+  background:var(--green);
+}
+
+.journey-juniors{
+  border-color:rgba(35,100,180,.28);
+}
+
+.journey-juniors::before{
+  background:#2364b4;
+}
+
+.journey-adults{
+  border-color:rgba(150,155,160,.20);
+}
+
+.journey-adults::before{
+  background:#969ba0;
+}
+
+.journey-number{
+  display:block;
+  margin-bottom:14px;
+  font-family:'Oswald', sans-serif;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:2px;
+  color:rgba(255,255,255,.45);
+}
+
+.journey-step h3{
+  margin:0 0 18px;
+  font-family:'Oswald', sans-serif;
+  font-size:30px;
+  line-height:1;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+.journey-step p{
+  margin:0;
+  font-size:15px;
+  line-height:1.7;
+  color:rgba(255,255,255,.72);
+}
+
+.journey-connector{
+  width:42px;
+  align-self:center;
+  height:2px;
+  background:linear-gradient(
+    90deg,
+    rgba(0,180,110,.75),
+    rgba(35,100,180,.75)
+  );
+  position:relative;
+}
+
+.journey-connector::after{
+  content:"";
+  position:absolute;
+  right:-1px;
+  top:50%;
+  width:8px;
+  height:8px;
+  border-top:2px solid rgba(255,255,255,.7);
+  border-right:2px solid rgba(255,255,255,.7);
+  transform:translateY(-50%) rotate(45deg);
+}
+
+@media (max-width:900px){
+
+  .journey-track{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .journey-connector{
+    width:2px;
+    height:30px;
+    justify-self:center;
+    background:linear-gradient(
+      180deg,
+      rgba(0,180,110,.75),
+      rgba(35,100,180,.75)
+    );
+  }
+
+  .journey-connector::after{
+    right:auto;
+    left:50%;
+    top:auto;
+    bottom:-1px;
+    transform:translateX(-50%) rotate(135deg);
+  }
+
+}
+
+@media (max-width:600px){
+
+  .journey-section{
+    margin-top:60px;
+    padding-top:50px;
+  }
+
+  .journey-step{
+    padding:25px 22px;
+    min-height:auto;
+  }
+
+  .journey-step h3{
+    font-size:26px;
+  }
+
+}
