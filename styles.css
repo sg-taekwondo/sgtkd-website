@@ -3269,3 +3269,12 @@ footer a:hover{
     );
   border-color:rgba(35,100,180,.38);
 }
+.adults-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(70,70,70,.16),
+      rgba(0,0,0,.97) 65%
+    );
+  border-color:rgba(150,155,160,.28);
+}
