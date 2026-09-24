@@ -3247,3 +3247,16 @@ footer a:hover{
         bottom:-30px;
     }
 }
+/* =========================
+   PATHWAY CARDS
+========================= */
+
+.ninjas-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0,110,70,.22),
+      rgba(0,0,0,.96) 65%
+    );
+  border-color:rgba(0,180,110,.35);
+}
