@@ -3786,3 +3786,28 @@ footer a:hover{
   }
 
 }
+/* =========================
+   ARTICLE FEATURE IMAGE
+========================= */
+
+.article-feature{
+  padding:70px 0 20px;
+}
+
+.article-feature .container{
+  max-width:1100px;
+}
+
+.article-feature img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid var(--line);
+  box-shadow:0 18px 50px rgba(0,0,0,.45);
+}
+
+@media(max-width:600px){
+  .article-feature{
+    padding:50px 0 10px;
+  }
+}
