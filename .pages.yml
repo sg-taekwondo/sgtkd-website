@@ -1,0 +1,49 @@
+
+media:
+  images:
+    input: assets/news
+    output: /assets/news
+
+content:
+  - name: articles
+    label: News Articles
+    type: collection
+    path: articles
+    filename: "{year}-{month}-{day}-{title}.md"
+    view:
+      primary: title
+      sort:
+        - field: date
+          direction: desc
+    fields:
+      - name: title
+        label: Article Title
+        type: string
+        required: true
+
+      - name: date
+        label: Publication Date
+        type: date
+        required: true
+
+      - name: cover
+        label: Cover Photo
+        type: image
+        required: true
+        options:
+          media: images
+          path: articles
+          extensions:
+            - jpg
+            - jpeg
+            - png
+            - webp
+
+      - name: body
+        label: Article Content
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: images
+          path: articles
