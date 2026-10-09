@@ -67,7 +67,7 @@
     }
 
     .article-card:focus-visible {
-      outline: 3px solid #2475bd;
+      outline: 3px solid #00a86b;
       outline-offset: 4px;
     }
 
@@ -82,12 +82,13 @@
     .article-title {
       margin: 0;
       padding: 20px 22px 22px;
+      color: #111820;
       font-size: 1.15rem;
       line-height: 1.4;
       font-weight: 700;
     }
 
-    /* Empty state shown until articles are published */
+    /* Empty state when no articles are published */
 
     .news-empty {
       max-width: 680px;
@@ -218,16 +219,21 @@
       </div>
 
       <!--
-        Published article tiles will appear here when the
-        article publishing system is connected.
-        Each tile will contain a cover image and title only.
+        The publishing script inserts article tiles here.
+        Each tile contains a cover photo and article title only.
       -->
 
       <div class="article-grid" id="article-grid" hidden>
-</div>
+      </div>
 
       <!-- Displayed while there are no published articles -->
-      <div class="news-empty" id="news-empty"><h3>Our Latest News Is Coming Soon</h3><p>Check back soon for club news, student achievements, events and updates from SG Taekwon-Do.</p></div>
+      <div class="news-empty" id="news-empty">
+        <h3>Our Latest News Is Coming Soon</h3>
+        <p>
+          Check back soon for club news, student achievements,
+          events and updates from SG Taekwon-Do.
+        </p>
+      </div>
 
     </div>
   </section>
@@ -281,3 +287,4 @@
 
 </body>
 </html>
+
