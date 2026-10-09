@@ -78,13 +78,16 @@ def main():
             ) from error
 
         # Only permit local image paths from the website's assets directory.
-        cover_path = cover.lstrip("/")
-        if cover_path.startswith("assets/"):
-            image_url = "/" + cover_path
-        elif cover_path.startswith("news/"):
-            image_url = "/assets/" + cover_path
-        else:
-            image_url = "/assets/news/" + Path(cover_path).name
+        
+cover_path = cover.lstrip("/")
+
+if cover_path.startswith("assets/"):
+    image_url = cover_path
+elif cover_path.startswith("news/"):
+    image_url = "assets/" + cover_path
+else:
+    image_url = "assets/news/" + Path(cover_path).name
+
 
         slug = slugify(path.stem)
         articles.append({
@@ -138,7 +141,7 @@ def main():
     <a href="../news.html" class="article-back">← Back to News</a>
     <h1>{escape(article['title'])}</h1>
     <p class="article-date">{escape(article['date'])}</p>
-    <img src="{escape(article['cover'], quote=True)}" alt="{escape(article['title'], quote=True)}">
+    <img src="../{escape(article['cover'], quote=True)}" alt="{escape(article['title'], quote=True)}">
     <div class="article-body">
       {markdown_to_html(article['body'])}
     </div>
