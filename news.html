@@ -40,6 +40,7 @@
     .article-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      justify-content: center;
       gap: 28px;
       align-items: start;
     }
@@ -48,7 +49,10 @@
 
     .article-card {
       display: block;
+      width: 100%;
+      max-width: 380px;
       min-width: 0;
+      justify-self: center;
       overflow: hidden;
       color: inherit;
       text-decoration: none;
@@ -67,7 +71,7 @@
     }
 
     .article-card:focus-visible {
-      outline: 3px solid #00a86b;
+      outline: 3px solid #2475bd;
       outline-offset: 4px;
     }
 
@@ -82,13 +86,13 @@
     .article-title {
       margin: 0;
       padding: 20px 22px 22px;
-      color: #111820;
+      color: #17212d;
       font-size: 1.15rem;
       line-height: 1.4;
       font-weight: 700;
     }
 
-    /* Empty state when no articles are published */
+    /* Empty state before the first article is published */
 
     .news-empty {
       max-width: 680px;
@@ -131,6 +135,10 @@
       .article-grid {
         grid-template-columns: 1fr;
         gap: 22px;
+      }
+
+      .article-card {
+        max-width: 420px;
       }
 
       .article-title {
@@ -219,14 +227,14 @@
       </div>
 
       <!--
-        The publishing script inserts article tiles here.
-        Each tile contains a cover photo and article title only.
+        build_news.py inserts published article tiles here.
+        Each tile displays its cover image and article title.
       -->
 
       <div class="article-grid" id="article-grid" hidden>
       </div>
 
-      <!-- Displayed while there are no published articles -->
+      <!-- Displayed when no articles are published -->
       <div class="news-empty" id="news-empty">
         <h3>Our Latest News Is Coming Soon</h3>
         <p>
@@ -287,4 +295,3 @@
 
 </body>
 </html>
-
