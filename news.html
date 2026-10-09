@@ -1,201 +1,289 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News | SG Taekwon-Do</title>
-<meta name="description" content="SG Taekwon-Do — ITF Taekwon-Do training for children, juniors and adults.">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>News | SG Taekwon-Do</title>
+  <meta name="description" content="Read the latest news, achievements and updates from SG Taekwon-Do in Campbeltown.">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* =========================
+       NEWS PAGE
+    ========================= */
+
+    .news-section {
+      padding-top: 70px;
+      padding-bottom: 90px;
+    }
+
+    .news-intro {
+      max-width: 760px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .news-intro h2 {
+      margin-bottom: 16px;
+    }
+
+    .news-intro p {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Article grid */
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* Individual article tile */
+
+    .article-card {
+      display: block;
+      min-width: 0;
+      overflow: hidden;
+      color: inherit;
+      text-decoration: none;
+      background: var(--card, #ffffff);
+      border: 1px solid rgba(128, 128, 128, 0.18);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+    }
+
+    .article-card:focus-visible {
+      outline: 3px solid #2475bd;
+      outline-offset: 4px;
+    }
+
+    .article-cover {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      display: block;
+      object-fit: cover;
+      background: #17212d;
+    }
+
+    .article-title {
+      margin: 0;
+      padding: 20px 22px 22px;
+      font-size: 1.15rem;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    /* Empty state shown until articles are published */
+
+    .news-empty {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 55px 28px;
+      text-align: center;
+      border: 1px dashed rgba(128, 128, 128, 0.45);
+      border-radius: 12px;
+      background: rgba(128, 128, 128, 0.04);
+    }
+
+    .news-empty h3 {
+      margin: 0 0 12px;
+    }
+
+    .news-empty p {
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Responsive layouts */
+
+    @media (max-width: 900px) {
+      .article-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .news-section {
+        padding-top: 48px;
+        padding-bottom: 60px;
+      }
+
+      .news-intro {
+        margin-bottom: 32px;
+      }
+
+      .article-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .article-title {
+        padding: 17px 18px 19px;
+        font-size: 1.08rem;
+      }
+
+      .news-empty {
+        padding: 38px 22px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/sg-tkd-logo.png" alt="SG Taekwon-Do logo">
-      <span>SG Taekwon-Do</span>
-    </a>
-    <button class="nav-toggle" aria-label="Open menu">☰</button>
-    <ul class="nav-links">
-      <li><a href="index.html" data-page="index.html">Home</a></li>
-      <li><a href="about.html" data-page="about.html">About</a></li>
-      <li class="dropdown">
-        <a href="classes.html" data-page="classes.html">Classes ▾</a>
-        <div class="dropdown-menu">
-          <a href="adults.html" data-page="adults.html">Adults</a>
-          <a href="juniors.html" data-page="juniors.html">Juniors</a>
-          <a href="ninjas.html" data-page="ninjas.html">Ninjas</a>
+  <!-- Navigation -->
+  <header>
+    <div class="container nav">
+
+      <a class="brand" href="index.html">
+        <img src="assets/sg-tkd-logo.png" alt="SG Taekwon-Do logo">
+        <span>SG Taekwon-Do</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul class="nav-links">
+        <li>
+          <a href="index.html" data-page="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="about.html" data-page="about.html">About</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="classes.html" data-page="classes.html">Classes ▾</a>
+
+          <div class="dropdown-menu">
+            <a href="adults.html" data-page="adults.html">Adults</a>
+            <a href="juniors.html" data-page="juniors.html">Juniors</a>
+            <a href="ninjas.html" data-page="ninjas.html">Ninjas</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="news.html" data-page="news.html">News</a>
+        </li>
+
+        <li>
+          <a href="partners.html" data-page="partners.html">Partners</a>
+        </li>
+
+        <li>
+          <a href="contact.html" data-page="contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="kicker">SG Taekwon-Do</span>
+      <h1>News</h1>
+      <p>
+        The latest stories and achievements from across our club.
+      </p>
+    </div>
+  </section>
+
+  <!-- Articles -->
+  <section class="section news-section">
+    <div class="container">
+
+      <div class="news-intro">
+        <span class="kicker">Latest News</span>
+        <h2>From The Dojang</h2>
+        <p>
+          Discover the latest news and stories from SG Taekwon-Do.
+        </p>
+      </div>
+
+      <!--
+        Published article tiles will appear here when the
+        article publishing system is connected.
+        Each tile will contain a cover image and title only.
+      -->
+
+      <div class="article-grid" id="article-grid" hidden>
+      </div>
+
+      <!-- Displayed while there are no published articles -->
+      <div class="news-empty" id="news-empty">
+        <h3>Our Latest News Is Coming Soon</h3>
+        <p>
+          Check back soon for club news, student achievements,
+          events and updates from SG Taekwon-Do.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <h3>SG Taekwon-Do</h3>
+          <p>
+            Traditional ITF Taekwon-Do with a modern, welcoming
+            approach. Training, discipline, confidence and
+            community for all ages.
+          </p>
         </div>
-      </li>
-      <li><a href="news.html" data-page="news.html">News</a></li>
-      <li><a href="partners.html" data-page="partners.html">Partners</a></li>
-      <li><a href="contact.html" data-page="contact.html">Contact Us</a></li>
-    </ul>
-  </div>
-</header>
 
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About SG Taekwon-Do</a></li>
+            <li><a href="classes.html">Our Classes</a></li>
+            <li><a href="news.html">News &amp; Updates</a></li>
+            <li><a href="partners.html">Our Partners</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
 
-<section class="page-hero"><div class="container"><span class="kicker">SG Taekwon-Do</span><h1>News</h1><p>Club announcements, student achievements, events, competitions, gradings and training updates.</p></div></section>
-<section class="section">
-  <div class="container">
+        <div>
+          <h3>Classes</h3>
+          <ul>
+            <li><a href="adults.html">Adults</a></li>
+            <li><a href="juniors.html">Juniors</a></li>
+            <li><a href="ninjas.html">Ninjas</a></li>
+          </ul>
+        </div>
 
-    <div class="section-intro">
-      <span class="kicker">Latest News</span>
-      <h2>Keep Up To Date</h2>
-      <p>
-        Stay up to date with everything happening at SG Taekwon-Do — from
-        competitions and gradings to events, achievements and club news.
-      </p>
-    </div>
-
-    <div class="news-grid">
-<article class="news-card">
-  <span class="date">Club News</span>
-  <h3>Welcome To SG Taekwon-Do</h3>
-  <p>
-    Welcome to the new SG Taekwon-Do website — your place to keep up with
-    club news, training, events, competitions, achievements and everything
-    happening across our Taekwon-Do community.
-  </p>
-</article>
-<article class="news-card">
-  <span class="date">Competitions</span>
-  <h3>Competition Team Updates</h3>
-  <p>
-    Follow our competitors as they prepare, compete and represent SG Taekwon-Do
-    at tournaments, championships and squad events.
-  </p>
-</article>
-<article class="news-card">
-  <span class="date">Achievements</span>
-  <h3>Student Achievements</h3>
-  <p>
-    Celebrate grading milestones, black belt achievements, awards, personal
-    successes and the dedication of our students across the club.
-  </p>
-</article></div></div></section>
-
-<section class="section news-categories">
-  <div class="container">
-
-    <div class="section-intro">
-      <span class="kicker">Explore Our Stories</span>
-      <h2>What's Happening At SG Taekwon-Do</h2>
-      <p>
-        From the dojang to the competition floor, discover the latest stories,
-        achievements and events from across the club.
-      </p>
-    </div>
-
-    <div class="news-category-grid">
-
-      <div class="news-category">
-        <span class="category-number">01</span>
-        <h3>Competitions</h3>
-        <p>Tournament results, squad selections, preparation and competition highlights.</p>
       </div>
 
-      <div class="news-category">
-        <span class="category-number">02</span>
-        <h3>Gradings</h3>
-        <p>Grading updates, new belts, black belt achievements and student progression.</p>
+      <div class="footer-bottom">
+        <span>© 2026 SG Taekwon-Do. All rights reserved.</span>
+        <span>Dream • Believe • Prepare</span>
       </div>
-
-      <div class="news-category">
-        <span class="category-number">03</span>
-        <h3>Events</h3>
-        <p>Seminars, demonstrations, club events and special training sessions.</p>
-      </div>
-
-      <div class="news-category">
-        <span class="category-number">04</span>
-        <h3>Club Life</h3>
-        <p>Student stories, awards, fundraising, community activity and club highlights.</p>
-      </div>
-
-       </div>
-
-  </div>
-</section>
-
-<section class="section latest-stories">
-  <div class="container">
-
-    <div class="section-intro">
-      <span class="kicker">Latest Stories</span>
-      <h2>From The Dojang</h2>
-      <p>
-        News, results, achievements and moments from across SG Taekwon-Do.
-      </p>
-    </div>
-
-    <div class="latest-stories-grid">
-
-      <article class="story-card">
-        <span class="story-category">Club News</span>
-        <h3>Life At SG Taekwon-Do</h3>
-        <p>
-          Discover what's happening across our classes, training sessions
-          and wider club community.
-        </p>
-      </article>
-
-      <article class="story-card">
-        <span class="story-category">Competitions</span>
-        <h3>On The Competition Floor</h3>
-        <p>
-          Follow our students as they prepare for tournaments, compete
-          and represent SG Taekwon-Do.
-        </p>
-      </article>
-
-      <article class="story-card">
-        <span class="story-category">Achievements</span>
-        <h3>Celebrating Our Students</h3>
-        <p>
-          From grading milestones to black belts and awards, celebrate
-          the dedication and progress of our students.
-        </p>
-      </article>
 
     </div>
+  </footer>
 
-  </div>
-</section>
+  <script src="script.js"></script>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h3>SG Taekwon-Do</h3>
-        <p>Traditional ITF Taekwon-Do with a modern, welcoming approach. Training, discipline, confidence and community for all ages.</p>
-      </div>
-      <div>
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="about.html">About SG Taekwon-Do</a></li>
-          <li><a href="classes.html">Our Classes</a></li>
-          <li><a href="news.html">News & Updates</a></li>
-          <li><a href="partners.html">Our Partners</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Classes</h3>
-        <ul>
-          <li><a href="adults.html">Adults</a></li>
-          <li><a href="juniors.html">Juniors</a></li>
-          <li><a href="ninjas.html">Ninjas</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 SG Taekwon-Do. All rights reserved.</span>
-      <span>Dream • Believe • Prepare</span>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
