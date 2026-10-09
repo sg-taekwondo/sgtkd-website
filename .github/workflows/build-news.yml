@@ -56,3 +56,16 @@ jobs:
             news.html
           if-no-files-found: error
 
+
+      - name: Upload generated news for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-news-generated-files
+          path: |
+            news/
+            news.html
+            styles.css
+            script.js
+            assets/
+          if-no-files-found: error
+
