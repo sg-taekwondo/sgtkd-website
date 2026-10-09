@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +16,8 @@
 </head>
 
 <body>
+
+<!-- HEADER AND NAVIGATION -->
 
 <header>
   <div class="container nav">
@@ -62,7 +65,7 @@
 </header>
 
 
-<!-- CONTACT PAGE HERO -->
+<!-- PAGE HERO -->
 
 <section class="page-hero">
   <div class="container">
@@ -85,7 +88,7 @@
 <section class="section">
   <div class="container contact-grid">
 
-    <!-- PRIMARY CONTACT OPTION -->
+    <!-- PRIMARY CONTACT: FACEBOOK MESSENGER -->
 
     <div class="card">
 
@@ -116,7 +119,7 @@
     </div>
 
 
-    <!-- OTHER CONTACT DETAILS -->
+    <!-- CLUB CONTACT DETAILS -->
 
     <div class="card">
 
@@ -153,11 +156,37 @@
       <h2>Send an Enquiry</h2>
 
       <p>
-        Don't use Facebook? You can use the form below to tell us
-        about your enquiry.
+        Don't use Facebook? Complete the form below to send your
+        enquiry directly to the club.
       </p>
 
-      <form data-demo>
+      <form
+        action="https://formsubmit.co/seangradytkd4@gmail.com"
+        method="POST"
+      >
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Enquiry - SG Taekwon-Do Website"
+        >
+
+        <input
+          type="hidden"
+          name="_template"
+          value="table"
+        >
+
+        <!-- SPAM PROTECTION -->
+
+        <input
+          type="text"
+          name="_honey"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+          style="display:none"
+        >
 
         <label for="name">Name</label>
 
@@ -184,7 +213,7 @@
         <textarea
           id="message"
           name="message"
-          rows="5"
+          rows="6"
           required
         ></textarea>
 
@@ -196,8 +225,8 @@
 
       <p>
         <small>
-          The online form will be connected to a working message
-          delivery service in a subsequent step.
+          Please provide a valid email address so the club can respond
+          to your enquiry.
         </small>
       </p>
 
@@ -285,6 +314,8 @@
   </div>
 </footer>
 
+
+<!-- SITE JAVASCRIPT -->
 
 <script src="script.js"></script>
 
