@@ -2,34 +2,18 @@
 name: Build SG Taekwon-Do News
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'articles/**'
-      - 'assets/news/**'
-      - 'build_news.py'
-      - 'news.html'
-      - '.github/workflows/build-news.yml'
-
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: build-sgtk-news
-  cancel-in-progress: false
+  contents: read
 
 jobs:
   build-news:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
+      - name: Check out selected branch
         uses: actions/checkout@v4
-        with:
-          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,17 +23,24 @@ jobs:
       - name: Install Markdown dependency
         run: python -m pip install Markdown
 
-      - name: Build article pages
+      - name: Check article and cover files
+        run: |
+          echo "Branch:"
+          git branch --show-current
+          echo "Article files:"
+          find articles -maxdepth 1 -type f -print
+          echo "Cover files:"
+          find assets/news -maxdepth 1 -type f -print
+          test -f articles/2026-10-09-test-news-article.md
+          test -f assets/news/test-cover.jpg
+
+      - name: Run news generator
         run: python build_news.py
 
-      - name: Commit generated news pages
+      - name: Check generated files
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add news.html news/
-          if ! git diff --cached --quiet; then
-            git commit -m "Build published news articles"
-            git push origin HEAD:main
-          else
-            echo "No generated news changes to commit."
-          fi
+          echo "Generated article pages:"
+          find news -maxdepth 1 -type f -print
+          test -f news/test-news-article.html
+          grep -q "Test News Article" news.html
+          echo "Article page and News tile generated successfully."
