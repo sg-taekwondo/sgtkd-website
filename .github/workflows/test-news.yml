@@ -1,0 +1,33 @@
+
+name: Test SG Taekwon-Do News Generator
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out test branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Markdown dependency
+        run: python -m pip install Markdown
+
+      - name: Run news generator
+        run: python build_news.py
+
+      - name: Check generated files
+        run: |
+          test -f news/test-news-article.html
+          grep -q "Test News Article" news.html
+          echo "Article page and News tile generated successfully."
