@@ -1,4 +1,3 @@
-
 ---
 title: "Test News Article"
 date: "2026-10-09"
