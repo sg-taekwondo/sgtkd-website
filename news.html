@@ -12,22 +12,22 @@
 
   <style>
     /* =========================
-       NEWS PAGE
+       NEWS PAGE — COMPACT LAYOUT
     ========================= */
 
     .news-section {
-      padding-top: 70px;
-      padding-bottom: 90px;
+      padding-top: 30px;
+      padding-bottom: 35px;
     }
 
     .news-intro {
       max-width: 760px;
-      margin: 0 auto 48px;
+      margin: 0 auto 24px;
       text-align: center;
     }
 
     .news-intro h2 {
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
 
     .news-intro p {
@@ -35,23 +35,23 @@
       margin: 0 auto;
     }
 
-    /* Article grid: centres one or two articles */
+    /* Centred article grid */
 
     .article-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 28px;
-      align-items: start;
+      align-items: flex-start;
+      gap: 22px;
     }
 
     /* Individual article tile */
 
     .article-card {
       display: block;
-      flex: 0 1 calc((100% - 56px) / 3);
+      flex: 0 1 calc((100% - 44px) / 3);
       width: 100%;
-      max-width: 380px;
+      max-width: 340px;
       min-width: 0;
       overflow: hidden;
       color: inherit;
@@ -66,7 +66,7 @@
     }
 
     .article-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
     }
 
@@ -76,28 +76,28 @@
     }
 
     .article-cover {
-      width: 100%;
-      aspect-ratio: 16 / 10;
       display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
       background: #17212d;
     }
 
     .article-title {
       margin: 0;
-      padding: 20px 22px 22px;
+      padding: 13px 16px;
       color: #17212d;
-      font-size: 1.15rem;
-      line-height: 1.4;
+      font-size: 1.05rem;
+      line-height: 1.35;
       font-weight: 700;
     }
 
-    /* Empty state before the first article is published */
+    /* Empty state */
 
     .news-empty {
       max-width: 680px;
       margin: 0 auto;
-      padding: 55px 28px;
+      padding: 32px 24px;
       text-align: center;
       border: 1px dashed rgba(128, 128, 128, 0.45);
       border-radius: 12px;
@@ -105,50 +105,55 @@
     }
 
     .news-empty h3 {
-      margin: 0 0 12px;
+      margin: 0 0 10px;
     }
 
     .news-empty p {
       margin: 0;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
-    /* Tablet: two cards per row */
+    /* Tablet */
 
     @media (max-width: 900px) {
+      .news-section {
+        padding-top: 28px;
+        padding-bottom: 35px;
+      }
+
       .article-card {
         flex-basis: calc((100% - 22px) / 2);
       }
     }
 
-    /* Mobile: one centred card per row */
+    /* Mobile */
 
     @media (max-width: 600px) {
       .news-section {
-        padding-top: 48px;
-        padding-bottom: 60px;
+        padding-top: 24px;
+        padding-bottom: 30px;
       }
 
       .news-intro {
-        margin-bottom: 32px;
+        margin-bottom: 22px;
       }
 
       .article-grid {
-        gap: 22px;
+        gap: 18px;
       }
 
       .article-card {
         flex-basis: 100%;
-        max-width: 420px;
+        max-width: 380px;
       }
 
       .article-title {
-        padding: 17px 18px 19px;
-        font-size: 1.08rem;
+        padding: 12px 15px;
+        font-size: 1rem;
       }
 
       .news-empty {
-        padding: 38px 22px;
+        padding: 26px 18px;
       }
     }
   </style>
@@ -229,7 +234,7 @@
 
       <!--
         build_news.py inserts published article tiles here.
-        Each tile contains a cover image and article title only.
+        Each tile contains its cover image and title only.
       -->
 
       <div class="article-grid" id="article-grid" hidden>
