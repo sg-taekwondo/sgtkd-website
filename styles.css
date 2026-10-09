@@ -3867,3 +3867,78 @@ footer .footer-bottom {
   }
 }
 
+/* =========================
+   CONTACT FORM LAYOUT
+========================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  align-items: start;
+}
+
+.contact-grid > .card {
+  min-width: 0;
+}
+
+.contact-grid > .card:last-child {
+  grid-column: 1 / -1;
+}
+
+.contact-grid form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.contact-grid form label {
+  display: block;
+  margin-top: 8px;
+}
+
+.contact-grid form input,
+.contact-grid form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  color: #f5f7f6;
+  background: #080d0c;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  font: inherit;
+}
+
+.contact-grid form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-grid form input:focus,
+.contact-grid form textarea:focus {
+  outline: 2px solid #087f4b;
+  outline-offset: 2px;
+  border-color: #087f4b;
+}
+
+.contact-grid form button {
+  align-self: flex-start;
+  margin-top: 12px;
+}
+
+.contact-grid .notice {
+  margin-top: 22px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid > .card:last-child {
+    grid-column: auto;
+  }
+}
+
