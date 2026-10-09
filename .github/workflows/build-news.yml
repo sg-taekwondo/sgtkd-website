@@ -37,10 +37,12 @@ jobs:
       - name: Run news generator
         run: python build_news.py
 
+      
       - name: Check generated files
         run: |
           echo "Generated article pages:"
           find news -maxdepth 1 -type f -print
-          test -f news/test-news-article.html
+          test -f news/2026-10-09-test-news-article.html
           grep -q "Test News Article" news.html
           echo "Article page and News tile generated successfully."
+
