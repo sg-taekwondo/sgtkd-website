@@ -1,296 +1,55 @@
 
-from datetime import date
-from html import escape
-from pathlib import Path
-import re
+name: Build SG Taekwon-Do News
 
-import markdown
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'articles/**'
+      - 'assets/news/**'
+      - 'build_news.py'
+      - 'news.html'
+      - '.github/workflows/build-news.yml'
 
-ROOT = Path(__file__).resolve().parent
-ARTICLES_DIR = ROOT / "articles"
-NEWS_FILE = ROOT / "news.html"
-OUTPUT_DIR = ROOT / "news"
-ASSETS_DIR = ROOT / "assets"
+  workflow_dispatch:
 
+permissions:
+  contents: write
 
-def parse_front_matter(text):
-    """Read the article metadata at the top of a Markdown file."""
-    match = re.match(
-        r"\A---\s*\n(.*?)\n---\s*\n?(.*)\Z",
-        text,
-        re.S,
-    )
+concurrency:
+  group: build-sgtk-news
+  cancel-in-progress: false
 
-    if not match:
-        raise ValueError("Article is missing YAML front matter.")
+jobs:
+  build-news:
+    runs-on: ubuntu-latest
 
-    metadata = {}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
 
-    for line in match.group(1).splitlines():
-        if line and not line[0].isspace() and ":" in line:
-            key, value = line.split(":", 1)
-            metadata[key.strip()] = (
-                value.strip().strip('"').strip("'")
-            )
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-    return metadata, match.group(2).strip()
+      - name: Install Markdown dependency
+        run: python -m pip install Markdown
 
+      - name: Build article pages
+        run: python build_news.py
 
-def slugify(value):
-    """Create a safe URL-friendly article name."""
-    value = value.lower().strip()
-    value = re.sub(r"[^a-z0-9]+", "-", value)
-    return value.strip("-") or "article"
-
-
-def resolve_cover(cover):
-    """Validate a cover image and return its relative site path."""
-    cover_path = cover.strip().replace("\\", "/").lstrip("/")
-
-    if cover_path.startswith("assets/"):
-        relative = Path(cover_path)
-    elif cover_path.startswith("news/"):
-        relative = Path("assets") / cover_path
-    else:
-        relative = Path("assets/news") / Path(cover_path).name
-
-    assets_root = ASSETS_DIR.resolve()
-    resolved = (ROOT / relative).resolve()
-
-    if not resolved.is_relative_to(assets_root):
-        raise ValueError(f"Invalid cover image path: {cover}")
-
-    if not resolved.is_file():
-        raise FileNotFoundError(
-            f"Cover image not found: {relative.as_posix()}"
-        )
-
-    return relative.as_posix()
-
-
-def markdown_to_html(body):
-    """Convert article Markdown to HTML."""
-    return markdown.markdown(
-        body,
-        extensions=["extra", "sane_lists", "smarty"],
-        output_format="html5",
-    )
-
-
-def article_page(article):
-    """Generate an individual article page."""
-    title = escape(article["title"])
-    title_attribute = escape(article["title"], quote=True)
-    cover = escape(article["cover"], quote=True)
-    published = escape(article["date"])
-    body = markdown_to_html(article["body"])
-
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} | SG Taekwon-Do</title>
-  <meta name="description" content="{title_attribute}">
-  <link rel="stylesheet" href="../styles.css">
-  <style>
-    .article-page {{
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 24px 90px;
-    }}
-    .article-cover-image {{
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }}
-    .article-page h1 {{ line-height: 1.2; }}
-    .article-date {{
-      opacity: .75;
-      margin-bottom: 24px;
-    }}
-    .article-body {{
-      line-height: 1.8;
-      margin-top: 30px;
-    }}
-    .article-body img {{
-      max-width: 100%;
-      height: auto;
-    }}
-    .article-back {{
-      display: inline-block;
-      margin-top: 35px;
-    }}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="../index.html">
-        <img src="../assets/sg-tkd-logo.png" alt="SG Taekwon-Do logo">
-        <span>SG Taekwon-Do</span>
-      </a>
-      <button class="nav-toggle" aria-label="Open menu">☰</button>
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../classes.html">Classes</a></li>
-        <li><a href="../news.html">News</a></li>
-        <li><a href="../partners.html">Partners</a></li>
-        <li><a href="../contact.html">Contact Us</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main class="article-page">
-    <a href="../news.html" class="article-back">← Back to News</a>
-    <h1>{title}</h1>
-    <p class="article-date">{published}</p>
-    <img
-      class="article-cover-image"
-      src="../{cover}"
-      alt="{title_attribute}"
-    >
-    <div class="article-body">
-      {body}
-    </div>
-  </main>
-
-  <script src="../script.js"></script>
-</body>
-</html>
-"""
-
-
-def main():
-    if not NEWS_FILE.is_file():
-        raise FileNotFoundError("news.html was not found.")
-
-    original_news = NEWS_FILE.read_text(encoding="utf-8")
-
-    grid_pattern = re.compile(
-        r'<div class="article-grid" id="article-grid" hidden>\s*</div>',
-        re.S,
-    )
-    empty_pattern = re.compile(
-        r'<div class="news-empty" id="news-empty">.*?</div>',
-        re.S,
-    )
-
-    if not grid_pattern.search(original_news):
-        raise ValueError(
-            "The expected empty article-grid placeholder was not found."
-        )
-
-    if not empty_pattern.search(original_news):
-        raise ValueError(
-            "The expected news-empty placeholder was not found."
-        )
-
-    articles = []
-    used_slugs = set()
-
-    for path in sorted(ARTICLES_DIR.glob("*.md")):
-        metadata, body = parse_front_matter(
-            path.read_text(encoding="utf-8")
-        )
-
-        title = metadata.get("title", "").strip()
-        published = metadata.get("date", "").strip()
-        cover = metadata.get("cover", "").strip()
-
-        if not title or not published or not cover:
-            raise ValueError(
-                f"{path.name} needs title, date and cover fields."
-            )
-
-        try:
-            published_date = date.fromisoformat(published[:10])
-        except ValueError as error:
-            raise ValueError(
-                f"{path.name} has an invalid date: {published}"
-            ) from error
-
-        image_url = resolve_cover(cover)
-        slug = slugify(path.stem)
-
-        if slug in used_slugs:
-            raise ValueError(f"Duplicate article URL: {slug}")
-
-        used_slugs.add(slug)
-
-        articles.append({
-            "title": title,
-            "date": published_date.isoformat(),
-            "cover": image_url,
-            "body": body,
-            "slug": slug,
-        })
-
-    articles.sort(
-        key=lambda item: (item["date"], item["title"].lower()),
-        reverse=True,
-    )
-
-    # Generate article pages.
-    OUTPUT_DIR.mkdir(exist_ok=True)
-
-    for article in articles:
-        output_file = OUTPUT_DIR / f"{article['slug']}.html"
-        output_file.write_text(
-            article_page(article),
-            encoding="utf-8",
-        )
-
-    # Generate the cover-image and title-only tiles.
-    cards = []
-
-    for article in articles:
-        title = escape(article["title"], quote=True)
-        cover = escape(article["cover"], quote=True)
-        url = f"news/{article['slug']}.html"
-
-        cards.append(
-            f'<a class="article-card" href="{url}">'
-            f'<img class="article-cover" src="{cover}" '
-            f'alt="" loading="lazy">'
-            f'<h2 class="article-title">{title}</h2>'
-            f'</a>'
-        )
-
-    if cards:
-        grid_html = (
-            '<div class="article-grid" id="article-grid">\n'
-            + "\n".join(cards)
-            + "\n</div>"
-        )
-        empty_html = ""
-    else:
-        grid_html = (
-            '<div class="article-grid" id="article-grid" hidden>\n'
-            '</div>'
-        )
-        empty_html = (
-            '<div class="news-empty" id="news-empty">'
-            '<h3>Our Latest News Is Coming Soon</h3>'
-            '<p>Check back soon for club news, student achievements, '
-            'events and updates from SG Taekwon-Do.</p>'
-            '</div>'
-        )
-
-    updated_news = grid_pattern.sub(
-        grid_html, original_news, count=1
-    )
-    updated_news = empty_pattern.sub(
-        empty_html, updated_news, count=1
-    )
-
-    if updated_news != original_news:
-        NEWS_FILE.write_text(updated_news, encoding="utf-8")
-
-    print(f"Generated {len(articles)} article page(s).")
-
-
-if __name__ == "__main__":
-    main()
+      - name: Commit generated news pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.html news/
+          if ! git diff --cached --quiet; then
+            git commit -m "Build published news articles"
+            git push origin HEAD:main
+          else
+            echo "No generated news changes to commit."
+          fi
