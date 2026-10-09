@@ -35,11 +35,11 @@
       margin: 0 auto;
     }
 
-    /* Article grid */
+    /* Article grid: centres one or two articles */
 
     .article-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 28px;
       align-items: start;
@@ -49,10 +49,10 @@
 
     .article-card {
       display: block;
+      flex: 0 1 calc((100% - 56px) / 3);
       width: 100%;
       max-width: 380px;
       min-width: 0;
-      justify-self: center;
       overflow: hidden;
       color: inherit;
       text-decoration: none;
@@ -113,14 +113,15 @@
       line-height: 1.7;
     }
 
-    /* Responsive layouts */
+    /* Tablet: two cards per row */
 
     @media (max-width: 900px) {
-      .article-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px;
+      .article-card {
+        flex-basis: calc((100% - 22px) / 2);
       }
     }
+
+    /* Mobile: one centred card per row */
 
     @media (max-width: 600px) {
       .news-section {
@@ -133,11 +134,11 @@
       }
 
       .article-grid {
-        grid-template-columns: 1fr;
         gap: 22px;
       }
 
       .article-card {
+        flex-basis: 100%;
         max-width: 420px;
       }
 
@@ -228,7 +229,7 @@
 
       <!--
         build_news.py inserts published article tiles here.
-        Each tile displays its cover image and article title.
+        Each tile contains a cover image and article title only.
       -->
 
       <div class="article-grid" id="article-grid" hidden>
