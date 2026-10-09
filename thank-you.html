@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Thank You | SG Taekwon-Do</title>
+
+  <meta
+    name="description"
+    content="Thank you for contacting SG Taekwon-Do. Your enquiry has been submitted."
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .thank-you-page {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .thank-you-panel {
+      width: 100%;
+      max-width: 760px;
+      padding: 55px 35px;
+      box-sizing: border-box;
+      background: rgba(2, 5, 5, 0.94);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-top: 3px solid #078849;
+      position: relative;
+    }
+
+    .thank-you-panel::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      width: 35%;
+      height: 3px;
+      background: #1769d2;
+    }
+
+    .thank-you-logo {
+      display: block;
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin: 0 auto 28px;
+    }
+
+    .thank-you-kicker {
+      display: block;
+      color: #71d899;
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .thank-you-panel h1 {
+      margin: 0 0 22px;
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    .thank-you-panel p {
+      max-width: 560px;
+      margin: 0 auto 18px;
+      line-height: 1.8;
+      color: #c3c8c6;
+    }
+
+    .thank-you-actions {
+      margin-top: 32px;
+    }
+
+    .thank-you-actions .btn {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .thank-you-secondary {
+      display: block;
+      margin-top: 24px;
+      color: #bfc3c6;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .thank-you-secondary:hover {
+      color: #71d899;
+    }
+
+    @media (max-width: 600px) {
+      .thank-you-page {
+        min-height: 65vh;
+        padding: 40px 15px;
+      }
+
+      .thank-you-panel {
+        padding: 40px 22px;
+      }
+
+      .thank-you-logo {
+        width: 82px;
+        height: 82px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a class="brand" href="index.html">
+      <img src="assets/sg-tkd-logo.png" alt="SG Taekwon-Do logo">
+      <span>SG Taekwon-Do</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Open menu">☰</button>
+
+    <ul class="nav-links">
+      <li>
+        <a href="index.html" data-page="index.html">Home</a>
+      </li>
+
+      <li>
+        <a href="about.html" data-page="about.html">About</a>
+      </li>
+
+      <li class="dropdown">
+        <a href="classes.html" data-page="classes.html">Classes ▾</a>
+
+        <div class="dropdown-menu">
+          <a href="adults.html" data-page="adults.html">Adults</a>
+          <a href="juniors.html" data-page="juniors.html">Juniors</a>
+          <a href="ninjas.html" data-page="ninjas.html">Ninjas</a>
+        </div>
+      </li>
+
+      <li>
+        <a href="news.html" data-page="news.html">News</a>
+      </li>
+
+      <li>
+        <a href="partners.html" data-page="partners.html">Partners</a>
+      </li>
+
+      <li>
+        <a href="contact.html" data-page="contact.html">Contact Us</a>
+      </li>
+    </ul>
+
+  </div>
+</header>
+
+
+<main class="thank-you-page">
+  <div class="thank-you-panel">
+
+    <img
+      src="assets/sg-tkd-logo.png"
+      alt="SG Taekwon-Do club logo"
+      class="thank-you-logo"
+    >
+
+    <span class="thank-you-kicker">SG Taekwon-Do</span>
+
+    <h1>Thank You!</h1>
+
+    <p>
+      Your enquiry has been submitted successfully.
+    </p>
+
+    <p>
+      Thank you for getting in touch with SG Taekwon-Do.
+      We appreciate your interest and will respond as soon as we can.
+    </p>
+
+    <div class="thank-you-actions">
+      <a class="btn" href="index.html">Return to Home</a>
+
+      <a class="thank-you-secondary" href="classes.html">
+        Explore Our Classes
+      </a>
+    </div>
+
+  </div>
+</main>
+
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>SG Taekwon-Do</h3>
+        <p>
+          Traditional ITF Taekwon-Do with a modern, welcoming
+          approach. Training, discipline, confidence and community
+          for all ages.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About SG Taekwon-Do</a></li>
+          <li><a href="classes.html">Our Classes</a></li>
+          <li><a href="news.html">News &amp; Updates</a></li>
+          <li><a href="partners.html">Our Partners</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Classes</h3>
+        <ul>
+          <li><a href="adults.html">Adults</a></li>
+          <li><a href="juniors.html">Juniors</a></li>
+          <li><a href="ninjas.html">Ninjas</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 SG Taekwon-Do. All rights reserved.</span>
+      <span>Dream • Believe • Prepare</span>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
