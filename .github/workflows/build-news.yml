@@ -46,3 +46,13 @@ jobs:
           grep -q "Test News Article" news.html
           echo "Article page and News tile generated successfully."
 
+
+      - name: Upload generated news for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-news-generated-files
+          path: |
+            news/
+            news.html
+          if-no-files-found: error
+
