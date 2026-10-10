@@ -183,7 +183,6 @@ def main():
 
   <main class="article-page">
     <a href="../news.html" class="article-back">← Back to News</a>
-    <h1>{title_html}</h1>
     <p class="article-date">{date_html}</p>
     <img class="article-cover-image" src="../{cover_html}" alt="{title_html}">
     <div class="article-body">
