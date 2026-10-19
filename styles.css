@@ -4189,3 +4189,72 @@ footer .footer-bottom {
     text-align: center;
   }
 }
+
+
+/* FINAL MOBILE FIX: use normal document flow so the logo and tenets cannot overlap */
+@media (max-width: 600px) {
+  .journey-visual {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 22px !important;
+    min-height: 390px !important;
+    height: auto !important;
+    padding: 28px 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .journey-visual .journey-logo {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    flex: 0 0 auto !important;
+    z-index: 2 !important;
+  }
+
+  .journey-visual .journey-logo img {
+    display: block !important;
+    width: 145px !important;
+    max-width: 48vw !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .journey-visual .journey-words {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
+    font-size: .76rem !important;
+    line-height: 1.4 !important;
+    letter-spacing: 1.4px !important;
+    z-index: 3 !important;
+  }
+
+  .journey-visual .journey-words span {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
