@@ -1806,7 +1806,7 @@ footer a:hover{
 @media (min-width: 769px) {
 
     .home-hero {
-        background-image: url('assets/sg-tkd-hero.jpg') !important;
+        background-image: url('assets/sg-tkd-desktop-hero-centred.png') !important;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
