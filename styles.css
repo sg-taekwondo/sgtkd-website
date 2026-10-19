@@ -4146,3 +4146,46 @@ footer .footer-bottom {
     gap: 32px;
   }
 }
+
+
+/* MOBILE JOURNEY PANEL — separate the club logo from the tenets */
+@media (max-width: 600px) {
+  .journey-visual {
+    min-height: 390px;
+  }
+
+  .journey-logo {
+    top: 30%;
+    left: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .journey-logo img {
+    display: block;
+    width: 150px;
+    max-width: 42vw;
+  }
+
+  .journey-words {
+    top: auto;
+    right: auto;
+    bottom: 24px;
+    left: 50%;
+    width: 90%;
+    max-width: 90%;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    font-size: .76rem;
+    line-height: 1.35;
+    letter-spacing: 1.5px;
+    transform: translateX(-50%);
+  }
+
+  .journey-words span {
+    text-align: center;
+  }
+}
