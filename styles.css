@@ -4258,3 +4258,37 @@ footer .footer-bottom {
     text-align: center !important;
   }
 }
+
+
+/* ABOUT PAGE — stack the development cards on narrow screens */
+@media (max-width: 600px) {
+  .section.dark .container > .grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 18px !important;
+  }
+
+  .section.dark .container > .grid > .card {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 24px !important;
+    overflow-wrap: anywhere;
+  }
+
+  .section.dark .container > .grid > .card h3 {
+    font-size: clamp(24px, 7vw, 30px) !important;
+    line-height: 1.15 !important;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .section.dark .container > .grid > .card p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    overflow-wrap: break-word;
+  }
+}
