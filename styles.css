@@ -4035,3 +4035,114 @@ footer .footer-bottom {
     gap: 6px;
   }
 }
+
+
+/* MOBILE LAYOUT REPAIR — homepage cards and journey section */
+@media (max-width: 600px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .feature-grid,
+  .class-cards {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+    gap: 18px;
+  }
+
+  .feature-card,
+  .class-card {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+  }
+
+  .class-card {
+    min-height: 340px;
+  }
+
+  .class-card-content {
+    width: 100%;
+    min-width: 0;
+    padding: 26px 24px;
+  }
+
+  .class-card h3 {
+    font-size: 2rem;
+    overflow-wrap: anywhere;
+  }
+
+  .feature-card h3,
+  .feature-card p,
+  .class-card p {
+    overflow-wrap: anywhere;
+  }
+
+  .journey-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 30px;
+  }
+
+  .journey-grid > div:first-child {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .journey-list,
+  .journey-list li {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .journey-visual {
+    width: 100%;
+    min-width: 0;
+    min-height: 320px;
+  }
+
+  .journey-logo {
+    left: 50%;
+    width: 42%;
+  }
+
+  .journey-logo img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .journey-words {
+    right: 14px;
+    width: 42%;
+    font-size: .68rem;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+  }
+
+  .section {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .section-head {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .class-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .journey-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
