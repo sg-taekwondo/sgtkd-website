@@ -92,6 +92,10 @@ def build(path, title, subtitle, kind):
         field("Signature (type full name if completing electronically)","signature")
         check("Student has been involved in discussing consent, where appropriate.","student_involved")
         para("CONSENT RECORD — KEEP SECURELY. Do not distribute completed consent forms publicly. Update the club if permissions change.",8,10)
+    if kind == "health":
+        para("Return the completed form privately to seangradytkd4@gmail.com. Health information is sensitive; do not post completed forms publicly.",8,10)
+    else:
+        para("Return the completed form to seangradytkd4@gmail.com.",8,10)
     c.save()
 
 build(OUT/"SG_Taekwondo_Health_Declaration_Fillable.pdf","STUDENT HEALTH DECLARATION","Confidential — complete one form per student","health")
