@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/build_fillable_forms.py'
       - '.github/workflows/build-fillable-forms.yml'
+      - 'forms.html'
 permissions:
   contents: write
 jobs:
@@ -25,5 +26,6 @@ jobs:
           git add downloads/SG_Taekwondo_Health_Declaration_Fillable.pdf downloads/SG_Taekwondo_Photo_Video_Consent_Fillable.pdf
           if ! git diff --cached --quiet; then
             git commit -m "Add fillable student forms"
+            git pull --rebase origin main
             git push
           fi
